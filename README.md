@@ -1,1 +1,2 @@
 # wisconsinengineer.github.io
+Remaking the site from scratch in order to reduce load times, increase collaborative potential, and implement modularity so that the system can be easily understood and worked with.

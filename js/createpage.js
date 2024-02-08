@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const logo = document.createElement('img');
     logo.className = 'logo';
     logo.src = (title === "Home") ? 'images/logo.png' : '../images/logo.png';
+    logo.src = title.includes("Article:") ? '../../images/logo.png' : logo.src;
     logo.alt = 'wisconsinengineer';
     navbar.appendChild(logo);
 
@@ -63,6 +64,8 @@ document.addEventListener("DOMContentLoaded", function() {
     links.forEach(link => {
         const a = document.createElement('a');
         a.href = (title === "Home") ?  link.href : '../' + link.href;
+        a.href = (title.includes("Article:")) ? '../../' + link.href : a.href;
+        console.log(a.href);
         a.className = 'navbarelements dropdown-content';
         a.textContent = link.text;
         dropdownContent.appendChild(a);
