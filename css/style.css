@@ -1,3 +1,5 @@
+/* General use stylesheet for all pages. Anything page-specific should be in its own sheet. */
+
 body {
     background-color: #FFFFFF;
     margin:0;
@@ -51,6 +53,7 @@ li {
     float: left;
     border-right: 1px solid #bbb;
     border-bottom: 1px solid #bbb;
+    border-top: 1px solid #bbb;
     width: 100%;
 }
 .navbarelements a {
@@ -103,6 +106,8 @@ li {
     width: 100px;
     display: flex;
     float: right;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 5px;
+    margin-top: 20px;
+    margin-right: 120px;
+    margin-bottom: 10px;
 }
