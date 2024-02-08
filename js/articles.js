@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let count = 0;
     let total = 0;
+    var folders = []; // This should be dynamically generated, maybe with a text file listing them?
     
     resetButton.addEventListener('click', resetFilters);
     
@@ -23,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
     category.addEventListener('change', filterArticles);
     type.addEventListener('change', filterArticles);
 
-    loadPages();
+    loadFolders();
     if (!isMobile()) {
         window.addEventListener('resize', handleResize);
         handleResize();
@@ -68,8 +69,22 @@ document.addEventListener("DOMContentLoaded", function() {
         container.appendChild(a);
     }
     
+    function loadFolders() {
+        fetch(`../article-blurbs/folders.txt`)
+        .then(response => response.text())
+        .then(data => {
+            folderNames = data.split(',');
+            folderNames.forEach(folder => {
+                console.log(folder);
+                folders.push(folder);
+            });
+            console.log(folders)
+            loadPages();
+        })
+        .catch(error => console.error(`Error reading text file`));
+    }
+
     function loadPages() {
-        const folders = ['sp24']; // This should be dynamically generated, maybe with a text file listing them?
 
         folders.forEach(folder => {
             fetch(`../article-blurbs/${folder}/blurbs.json`)
