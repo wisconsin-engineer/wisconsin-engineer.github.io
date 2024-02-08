@@ -1,5 +1,5 @@
 /**
- * Sorting and filtering logic for the articles page
+ * Logic for the articles page (do not touch)
  */
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let count = 0;
     let total = 0;
-    var folders = []; // This should be dynamically generated, maybe with a text file listing them?
+    var folders = []; // folders.txt lists the order in which these are loaded and displayed
     
     resetButton.addEventListener('click', resetFilters);
     
@@ -75,10 +75,8 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(data => {
             folderNames = data.split(',');
             folderNames.forEach(folder => {
-                console.log(folder);
                 folders.push(folder);
             });
-            console.log(folders)
             loadPages();
         })
         .catch(error => console.error(`Error reading text file`));
@@ -90,7 +88,6 @@ document.addEventListener("DOMContentLoaded", function() {
             fetch(`../article-blurbs/${folder}/blurbs.json`)
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data);
                     data.articles.forEach(article => {
                         console.log(article);
                         createArticleFromJSON(article);
@@ -101,6 +98,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    // shows or hides articles based on attributes
     function filterArticles() {
         count = 0;
         total = 0;
@@ -131,6 +129,7 @@ document.addEventListener("DOMContentLoaded", function() {
         searchResults.textContent = `Showing  ${count} out of ${total} results.`;
     }
 
+    //updates a few size things
     function handleResize() {
         const searchBar = document.querySelector('.search-bar');
         const resultsButton = document.querySelector('.results');

@@ -1,0 +1,14 @@
+{
+    "articles": [
+      {
+        "title": "The Future of Technology",
+        "type": "Opinion",
+        "category": "Technology",
+        "author": "Jane Doe",
+        "season": "fa23",
+        "date": "December 14, 2023",
+        "description": "An in-depth look at emerging technologies and their potential impacts on the world.",
+        "link": "https://example.com/future-of-technology"
+      }
+    ]
+  }  

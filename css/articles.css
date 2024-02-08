@@ -1,5 +1,5 @@
 .content-body {
-    background-color: rgb(171, 190, 136);
+    background-color: rgb(255, 255, 255);
 }
 .search-bar-container h2 {
     text-align: center;
@@ -48,7 +48,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 10px;
-    background-color: aquamarine;
     margin-left: 2.5%;
 }
 .article {
