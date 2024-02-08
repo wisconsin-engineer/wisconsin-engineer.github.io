@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // select all project boxes and the options of the two dropdowns
     const searchbar = document.querySelector('.search-bar');
-    const resetButton = document.querySelector('.reset-button');
+    const resetButton = document.querySelector('.reset');
     const articles = document.querySelectorAll('.article');
     const author = document.getElementById('author-select');
     const searchResults = document.querySelector('.results');
@@ -17,8 +17,6 @@ document.addEventListener("DOMContentLoaded", function() {
     let count = 0;
     let total = 0;
     
-    
-    searchResults.addEventListener('click', changeButton);
     resetButton.addEventListener('click', resetFilters);
     resetButton.addEventListener('click', filterArticles);
     
@@ -60,18 +58,18 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         // reorder within the content body
-        const contentBody = document.querySelector('.content-body');
+        const articleContainer = document.querySelector('.article-container');
         articles.forEach(article => {
-            contentBody.appendChild(article);
+            articleContainer.appendChild(article);
         });
 
-        searchResults.textContent = `Showing  ${count} out of ${total} results. (Press to ${option} advanced search)`;
+        searchResults.textContent = `Showing  ${count} out of ${total} results.`;
     }
 
     function handleResize() {
-        const resetButton = document.querySelector('.reset');
         const searchBar = document.querySelector('.search-bar');
         const resultsButton = document.querySelector('.results');
+        const articleContainer = document.querySelector('.article-container');
         if (searchBar.style.display != 'none') {
             searchBar.style.display = lessThan90() ? 'flex' : 'grid';
             searchBar.style.flexDirection = lessThan90() ? 'column' : 'none';
@@ -94,36 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
         resultsButton.style.minWidth = '280px';
         resetButton.style.width = lessThan90() ? "280px": "400px";
         resetButton.style.minWidth = '280px';
-        
-    }
-
-    function changeButton() {
-        option = (option === "hide") ? "show": "hide";
-        if (option === "hide") {
-            if (!isMobile()) {
-                searchbar.style.display = lessThan90() ? 'flex' : 'grid';
-                searchbar.style.flexDirection = lessThan90() ? 'column' : 'none';
-                searchBarContainer.style.backgroundColor = '#bbb';
-                searchBarContainer.style.border = '1px solid #000000';
-                searchBarContainer.style.marginBottom = '20px';
-                resetButton.style.display = 'block';
-            } else {
-                searchbar.style.display = 'flex';
-                searchbar.style.flexDirection = 'column';
-                searchBarContainer.style.backgroundColor = '#bbb';
-                searchBarContainer.style.border = '1px solid #000000';
-                searchBarContainer.style.marginBottom = '20px';
-                resetButton.style.display = 'block';
-            }
-        } else {
-            searchbar.style.display = 'none';
-            resetButton.style.display = 'none';
-            searchBarContainer.style.border = 'none';
-            searchBarContainer.style.backgroundColor = '#DDD0C8';
-            searchBarContainer.style.marginBottom = '0';
-            searchBarContainer.querySelector('.search-label').textContent = '';
-        }
-        searchResults.textContent = `Showing  ${count} out of ${total} results. (Press to ${option} advanced search)`;
+        articleContainer.display = lessThan90() ? 'flex' : 'grid';
     }
 
     function resetFilters() {
