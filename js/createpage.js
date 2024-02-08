@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Create the logo image and append it to the navbar
     const logo = document.createElement('img');
     logo.className = 'logo';
-    logo.src = 'images/logo.png';
+    logo.src = '../images/logo.png';
     logo.alt = 'wisconsinengineer';
     navbar.appendChild(logo);
 
@@ -51,12 +51,12 @@ document.addEventListener("DOMContentLoaded", function() {
     // Dropdown content
     const dropdownContent = document.createElement('div');
     const links = [
-        { href: 'index.html', text: 'Home' },
-        { href: 'about.html', text: 'About' },
-        { href: 'articles.html', text: 'Articles' },
-        { href: 'team.html', text: 'Meet Our Team' },
-        { href: 'connect.html', text: 'Connect' },
-        { href: 'subscribe.html', text: 'Subscribe' }
+        { href: '../index.html', text: 'Home' },
+        { href: '../pages/about.html', text: 'About' },
+        { href: '../pages/articles.html', text: 'Articles' },
+        { href: '../pages/team.html', text: 'Meet Our Team' },
+        { href: '../pages/connect.html', text: 'Connect' },
+        { href: '../pages/subscribe.html', text: 'Subscribe' }
     ];
 
     links.forEach(link => {
