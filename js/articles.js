@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const selectedAuthor = author.value;
         const selectedCategory = category.value;
         const selectedType = type.value;
-        articleList = document.querySelectorAll(".article");
+        let articleList = document.querySelectorAll(".article");
         articleList.forEach(article => {
             total += 1;
             const time_period_choice = selectedTimePeriod === 'all' || article.classList.contains(selectedTimePeriod);
@@ -129,16 +129,14 @@ document.addEventListener("DOMContentLoaded", function() {
         searchResults.textContent = `Showing  ${count} out of ${total} results.`;
     }
 
-    //updates a few size things
+    // updates a few size things
     function handleResize() {
         if (!isMobile()) {
             const searchBar = document.querySelector('.search-bar');
             const resultsButton = document.querySelector('.results');
             const articleContainer = document.querySelector('.article-container');
-            if (searchBar.style.display != 'none') {
-                searchBar.style.display = lessThan90() ? 'flex' : 'grid';
-                searchBar.style.flexDirection = lessThan90() ? 'column' : 'none';
-            }
+            searchBar.style.display = lessThan90() ? 'flex' : 'grid';
+            searchBar.style.flexDirection = lessThan90() ? 'column' : 'none';
             // labels and boxes align differently and have different widths
             const labels = searchBar.querySelectorAll('.label');
             labels.forEach(label => {
@@ -157,7 +155,9 @@ document.addEventListener("DOMContentLoaded", function() {
             resultsButton.style.minWidth = '280px';
             resetButton.style.width = lessThan90() ? "280px": "400px";
             resetButton.style.minWidth = '280px';
-            articleContainer.display = lessThan90() ? 'flex' : 'grid';
+            articleContainer.style.display = lessThan90() ? 'flex' : 'grid';
+            articleContainer.style.flexDirection = lessThan90() ? 'column' : 'none';
+            articleContainer.style.marginLeft = lessThan90() ? '7.5%': '2.5%';
         } else {
             const searchBar = document.querySelector('.search-bar');
             const resultsButton = document.querySelector('.results');
@@ -179,7 +179,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 box.style.textAlign = 'center';
                 box.style.marginRight = '0px';
             });
-            // width of buttons changes per resolution
             resultsButton.style.width = "280px";
             resetButton.style.width = "280px";
             articleContainer.display = 'flex';
