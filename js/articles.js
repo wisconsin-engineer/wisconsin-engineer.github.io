@@ -95,7 +95,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const selectedAuthor = author.value;
         const selectedCategory = category.value;
         const selectedType = type.value;
-        articles.forEach(article => {
+        articleList = document.querySelectorAll(".article");
+        articleList.forEach(article => {
             total += 1;
             const time_period_choice = selectedTimePeriod === 'all' || article.classList.contains(selectedTimePeriod);
             const author_choice = selectedAuthor === 'all' || article.classList.contains(selectedAuthor);
