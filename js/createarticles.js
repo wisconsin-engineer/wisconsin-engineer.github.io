@@ -34,22 +34,23 @@ document.addEventListener("DOMContentLoaded", function() {
         a.appendChild(p);
     
         // Assuming you have a container element in your HTML to append this article to
-        const container = document.querySelector('.articles-container');
+        const container = document.querySelector('.article-container');
         container.appendChild(a);
     }
     
     function loadPages() {
+
         fetch('../article-blurbs/sp24/blurbs.json')
             .then(response => response.json())
             .then(data => {
-                // Directly iterate over the fetched array of articles.
-                data.forEach(article => {
+                console.log(data);
+                data.articles.forEach(article => {
+                    console.log(article);
                     createArticleFromJSON(article);
-                });
+                })
             })
             .catch(error => console.error('Error loading the JSON file:', error));
     }
-    
 
     loadPages();
     
