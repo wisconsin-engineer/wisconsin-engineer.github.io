@@ -27,6 +27,12 @@ document.addEventListener("DOMContentLoaded", function() {
     category.addEventListener('change', filterArticles);
     type.addEventListener('change', filterArticles);
 
+    filterArticles();
+    if (!isMobile()) {
+        window.addEventListener('resize', handleResize);
+        handleResize();
+    }
+
     function filterArticles() {
         count = 0;
         total = 0;
@@ -63,12 +69,37 @@ document.addEventListener("DOMContentLoaded", function() {
 
     }
 
-    filterArticles();
+    function handleResize() {
+        const resetButton = document.querySelector('.reset-button');
+        const searchBar = document.querySelector('.search-bar');
+        const resultsButton = document.querySelector('.results');
+        if (searchBar.style.display != 'none') {
+            searchBar.style.display = lessThan90() ? 'flex' : 'grid';
+            searchBar.style.flexDirection = lessThan90() ? 'column' : 'none';
+        }
+        // labels and boxes align differently and have different widths
+        const labels = searchBar.querySelectorAll('.label');
+        labels.forEach(label => {
+            label.style.width = '285px';
+            label.style.textAlign = lessThan90() ? 'center' : 'left';
+            label.style.marginLeft = lessThan90() ? '0px' : '10px';
+        });
+        const boxes = searchBar.querySelectorAll('.select');
+        boxes.forEach(box => {
+            box.style.width = '285px';
+            box.style.textAlign = lessThan90() ? 'center' : 'left';
+            box.style.marginRight = lessThan90() ? '0px' : '10px';
+        });
+        // width of buttons changes per resolution
+        resultsButton.style.width = lessThan90() ? "280px": "400px";
+        resultsButton.style.minWidth = '280px';
+        resetButton.style.width = lessThan90() ? "280px": "400px";
+        resetButton.style.minWidth = '280px';
+        
+    }
 
     function changeButton() {
         option = (option === "hide") ? "show": "hide";
-        const searchBarContainer = document.querySelector('.search-bar-container');
-        const resetButton = document.querySelector('.reset-button');
         if (option === "hide") {
             if (!isMobile()) {
                 searchbar.style.display = lessThan90() ? 'flex' : 'grid';

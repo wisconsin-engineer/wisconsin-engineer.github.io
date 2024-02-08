@@ -48,3 +48,27 @@
     width: 400px;
     display: inline-block;
 }
+
+/* Project grid structure */
+.article-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    row-gap: 10px;
+    column-gap: 10px;
+    padding-bottom: 35px;
+
+}
+.article {
+    margin-bottom: 10px;
+    padding: 2%;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    background-color: #bbb;
+    text-decoration: none;
+    height: 100%;
+    display: block;
+}
+.article:hover {
+    background-color: #d4d4d4;
+}
