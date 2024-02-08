@@ -43,25 +43,25 @@
     display: inline-block;
 }
 
-/* Project grid structure */
+/* article grid structure */
 .article-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-content: space-between;
     row-gap: 10px;
-    column-gap: 10px;
-    padding-bottom: 35px;
-
+    background-color: aquamarine;
+    margin-left: 2.5%;
 }
 .article {
     margin-bottom: 10px;
-    padding: 2%;
+    padding-left: 2%;
     border: 1px solid #000000;
-    border-radius: 20px;
-    background-color: #bbb;
+    background-color: #FFFFFF;
     text-decoration: none;
     height: 100%;
-    display: block;
+    width: 90%;
+}
+.article h2 {
+    text-align: left;
 }
 .article:hover {
     background-color: #d4d4d4;
