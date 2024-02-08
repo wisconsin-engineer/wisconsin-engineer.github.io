@@ -1,0 +1,50 @@
+.content-body {
+    background-color: rgb(171, 190, 136);
+}
+.search-bar-container {
+    margin-bottom: 20px;
+    background-color: #bbb;
+    border: 1px solid #000000;
+    border-radius: 20px;
+}
+.search-bar-container h2 {
+    text-align: center;
+}
+.search-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 10px;
+    column-gap: 0px;
+}
+.search-bar label {
+    max-width: 130px;
+    margin-left: 10px;
+}
+.search-bar select {
+    width: 285px;
+    margin-right: 10px;
+}
+.results-button {
+    text-align: center;
+}
+.results {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    width: 400px;
+    display: inline-block;
+}
+.reset-button {
+    text-align: center;
+}
+.reset {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+    width: 400px;
+    display: inline-block;
+}

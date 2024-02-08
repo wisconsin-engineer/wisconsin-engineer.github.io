@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const links = [
         { href: 'index.html', text: 'Home' },
         { href: 'about.html', text: 'About' },
-        { href: 'articles.html', text: 'Read' },
+        { href: 'articles.html', text: 'Articles' },
         { href: 'team.html', text: 'Meet Our Team' },
         { href: 'connect.html', text: 'Connect' },
         { href: 'subscribe.html', text: 'Subscribe' }

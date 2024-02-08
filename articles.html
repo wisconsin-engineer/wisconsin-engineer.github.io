@@ -15,6 +15,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Put any page-specific stylesheets here -->
+        <link rel="stylesheet" href="css/articles.css">
 
         <!-- Stylesheets needed for every page, copy to each page created -->
         <link rel="stylesheet" href="css/style.css">
@@ -27,8 +28,65 @@
 
         <!-- this section is unique to each page, when creating page-specific elements use the page-specific stylesheets and scripts -->
         <div class="content-body">
-            <div class="placeholder">
-                <h3>Placeholder content</h3>
+            <h1 class="title">Articles</h1>
+
+            <!-- This is the search bar, it will update what is shown below -->
+            <div class="search-bar-container">
+                <div class="search-bar">
+
+                    <!-- When the articles are from -->
+                    <label class="label" for="time-period-select">Time Period:</label>
+                    <select class="select" id="time-period-select">
+                        <option value="all">All</option>
+                        <option value="sp24">Spring 2024</option>
+                        <option value="fa23">Fall 2023</option>
+                        <option value="sp23">Spring 2023</option>
+                        <option value="fa22">Fall 2022</option>
+                        <option value="sp22">Spring 2022</option>
+                        <option value="fa21">Fall 2021</option>
+                        <option value="sp21">Spring 2021</option>
+                        <option value="fa20">Fall 2020</option>
+                        <option value="fa19">Fall 2019</option>
+                        <option value="fa16">Fall 2016</option>
+                    </select>
+
+                    <!-- Who wrote the article-->
+                    <label class="label" for="author-select">Author:</label>
+                    <select class="select" id="author-select">
+                        <option value="all">All</option>
+                        <option value="name1">Name 1</option>
+                        <option value="name2">Name 2</option>
+                        <option value="name3">Name 3</option>
+                    </select>
+
+                    <!-- What the article covers, very broadly -->
+                    <label class="label" for="category-select">Category:</label>
+                    <select class="select" id="category-select">
+                        <option value="all">All</option>
+                        <option value="technology">Technology</option>
+                        <option value="science">Science</option>
+                        <option value="engineering">Engineering</option>
+                    </select>
+            
+                    <!-- What type of article this is -->
+                    <label class="label" for="article-type-select">Type:</label>
+                    <select class="select" id="article-type-select">
+                        <option value="all">All</option>
+                        <option value="opinion">Opinion</option>
+                        <option value="interview">Interview</option>
+                    </select>
+                </div>
+
+                <!-- Resets all filters back to their default values -->
+                <div class="reset-button">
+                    <button class="reset">Reset filters</button>
+                </div>
+
+                <!-- This will show how many results are found out of the total number of articles -->
+                <div class="results-button">
+                    <button class="results"></button>
+                </div>
+
             </div>
         </div>
 
