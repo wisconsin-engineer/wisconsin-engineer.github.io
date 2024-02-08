@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function() {
     let total = 0;
     
     resetButton.addEventListener('click', resetFilters);
-    resetButton.addEventListener('click', filterArticles);
     
     author.addEventListener('change', filterArticles);
     timePeriod.addEventListener('change', filterArticles);
@@ -25,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function() {
     type.addEventListener('change', filterArticles);
 
     loadPages();
-    filterArticles();
     if (!isMobile()) {
         window.addEventListener('resize', handleResize);
         handleResize();
@@ -66,13 +64,12 @@ document.addEventListener("DOMContentLoaded", function() {
         a.appendChild(h3Author);
         a.appendChild(p);
     
-        // Assuming you have a container element in your HTML to append this article to
         const container = document.querySelector('.article-container');
         container.appendChild(a);
     }
     
     function loadPages() {
-        const folders = ['sp24']; // This should be dynamically generated
+        const folders = ['sp24']; // This should be dynamically generated, maybe with a text file listing them?
 
         folders.forEach(folder => {
             fetch(`../article-blurbs/${folder}/blurbs.json`)
@@ -83,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         console.log(article);
                         createArticleFromJSON(article);
                     });
+                    filterArticles();
                 })
                 .catch(error => console.error(`Error loading the JSON file from ${folder}:`, error));
         });
@@ -112,13 +110,7 @@ document.addEventListener("DOMContentLoaded", function() {
             article.style.display = isVisible ? 'block' : 'none';
             // for fading logic
             count += isVisible ? 1 : 0;
-        });
-
-        // reorder within the content body
-        const articleContainer = document.querySelector('.article-container');
-        articles.forEach(article => {
-            articleContainer.appendChild(article);
-        });
+        });        
 
         searchResults.textContent = `Showing  ${count} out of ${total} results.`;
     }
@@ -161,6 +153,7 @@ document.addEventListener("DOMContentLoaded", function() {
         timePeriod.value = 'all';
         type.value = 'all';
         category.value = 'all';
+        filterArticles();
     }
 
     function lessThan90(){
