@@ -51,14 +51,14 @@ document.addEventListener("DOMContentLoaded", function() {
         // Create the H3 element for the author
         const h3Author = document.createElement('h3');
         h3Author.className = 'author-name';
-        h3Author.textContent = 'Written by ' + articleData.author;
+        h3Author.textContent = 'Written by ' + articleData.author + ' - ' + articleData.date;
     
         // Create the paragraph element for the description
         const p = document.createElement('p');
         p.className = 'description';
         p.textContent = articleData.description;
     
-        // Append the elements to the anchor element in the correct order
+        // Append the elements to the anchor element
         a.appendChild(h3TypeAndCategory);
         a.appendChild(h2);
         a.appendChild(h3Author);
