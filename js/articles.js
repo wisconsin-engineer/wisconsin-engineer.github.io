@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     }
 
-    filterProjects();
+    filterArticles();
 
     function changeButton() {
         option = (option === "hide") ? "show": "hide";
