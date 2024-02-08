@@ -1,0 +1,44 @@
+{
+    "articles": [
+      {
+        "title": "The Future of Technology",
+        "type": "Opinion",
+        "category": "Technology",
+        "author": "Jane Doe",
+        "season": "sp24",
+        "date": "February 19th, 2024",
+        "description": "An in-depth look at emerging technologies and their potential impacts on the world.",
+        "link": "https://example.com/future-of-technology"
+      },
+      {
+        "title": "Understanding Climate Change",
+        "type": "Research",
+        "category": "Environment",
+        "author": "John Smith",
+        "season": "sp24",
+        "date": "February 9th, 2024",
+        "description": "A comprehensive overview of climate change, its causes, and its effects on our planet.",
+        "link": "https://example.com/understanding-climate-change"
+      },
+      {
+        "title": "The Art of Culinary",
+        "type": "Feature",
+        "category": "Lifestyle",
+        "author": "Alex Johnson",
+        "season": "sp24",
+        "date": "February 5th, 2024",
+        "description": "Exploring the art and science behind the culinary skills that tantalize our taste buds.",
+        "link": "https://example.com/the-art-of-culinary"
+      },
+      {
+        "title": "Advancements in Renewable Energy",
+        "type": "Analysis",
+        "category": "Science",
+        "author": "Emily White",
+        "season": "sp24",
+        "date": "February 12th, 2024",
+        "description": "Analyzing the latest advancements in renewable energy and what the future holds.",
+        "link": "https://example.com/advancements-in-renewable-energy"
+      }
+    ]
+  }  
