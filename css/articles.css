@@ -1,12 +1,6 @@
 .content-body {
     background-color: rgb(171, 190, 136);
 }
-.search-bar-container {
-    margin-bottom: 20px;
-    background-color: #bbb;
-    border: 1px solid #000000;
-    border-radius: 20px;
-}
 .search-bar-container h2 {
     text-align: center;
 }

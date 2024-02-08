@@ -66,11 +66,10 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         searchResults.textContent = `Showing  ${count} out of ${total} results. (Press to ${option} advanced search)`;
-
     }
 
     function handleResize() {
-        const resetButton = document.querySelector('.reset-button');
+        const resetButton = document.querySelector('.reset');
         const searchBar = document.querySelector('.search-bar');
         const resultsButton = document.querySelector('.results');
         if (searchBar.style.display != 'none') {
@@ -107,7 +106,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 searchBarContainer.style.backgroundColor = '#bbb';
                 searchBarContainer.style.border = '1px solid #000000';
                 searchBarContainer.style.marginBottom = '20px';
-                searchBarContainer.querySelector('.search-label').textContent = 'Advanced Search';
                 resetButton.style.display = 'block';
             } else {
                 searchbar.style.display = 'flex';
@@ -115,7 +113,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 searchBarContainer.style.backgroundColor = '#bbb';
                 searchBarContainer.style.border = '1px solid #000000';
                 searchBarContainer.style.marginBottom = '20px';
-                searchBarContainer.querySelector('.search-label').textContent = 'Advanced Search';
                 resetButton.style.display = 'block';
             }
         } else {
