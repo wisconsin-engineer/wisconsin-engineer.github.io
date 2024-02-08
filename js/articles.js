@@ -28,6 +28,31 @@ document.addEventListener("DOMContentLoaded", function() {
     if (!isMobile()) {
         window.addEventListener('resize', handleResize);
         handleResize();
+    } else {
+        const searchBar = document.querySelector('.search-bar');
+        const resultsButton = document.querySelector('.results');
+        const articleContainer = document.querySelector('.article-container');
+        if (searchBar.style.display != 'none') {
+            searchBar.style.display = 'flex';
+            searchBar.style.flexDirection = 'column';
+        }
+        // labels and boxes align differently and have different widths
+        const labels = searchBar.querySelectorAll('.label');
+        labels.forEach(label => {
+            label.style.width = '285px';
+            label.style.textAlign = 'center';
+            label.style.marginLeft = '0px';
+        });
+        const boxes = searchBar.querySelectorAll('.select');
+        boxes.forEach(box => {
+            box.style.width = '285px';
+            box.style.textAlign = 'center';
+            box.style.marginRight = '0px';
+        });
+        resultsButton.style.width = "280px";
+        resetButton.style.width = "280px";
+        articleContainer.style.display = 'flex';
+        articleContainer.style.flexDirection = 'column';
     }
 
     function createArticleFromJSON(articleData) {
@@ -158,31 +183,6 @@ document.addEventListener("DOMContentLoaded", function() {
             articleContainer.style.display = lessThan90() ? 'flex' : 'grid';
             articleContainer.style.flexDirection = lessThan90() ? 'column' : 'none';
             articleContainer.style.marginLeft = lessThan90() ? '7.5%': '2.5%';
-        } else {
-            const searchBar = document.querySelector('.search-bar');
-            const resultsButton = document.querySelector('.results');
-            const articleContainer = document.querySelector('.article-container');
-            if (searchBar.style.display != 'none') {
-                searchBar.style.display = 'flex';
-                searchBar.style.flexDirection = 'column';
-            }
-            // labels and boxes align differently and have different widths
-            const labels = searchBar.querySelectorAll('.label');
-            labels.forEach(label => {
-                label.style.width = '285px';
-                label.style.textAlign = 'center';
-                label.style.marginLeft = '0px';
-            });
-            const boxes = searchBar.querySelectorAll('.select');
-            boxes.forEach(box => {
-                box.style.width = '285px';
-                box.style.textAlign = 'center';
-                box.style.marginRight = '0px';
-            });
-            resultsButton.style.width = "280px";
-            resetButton.style.width = "280px";
-            articleContainer.style.display = 'flex';
-            articleContainer.style.flexDirection = 'column';
         }
     }
 
