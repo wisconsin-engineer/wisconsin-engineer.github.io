@@ -4,6 +4,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const menuButton = document.getElementById("navDrop");
     const buttons = document.querySelectorAll(".dropdown-content");
+    const scrollButton = document.getElementById("scrollbutton");
 
     // collapsed by default
     buttons.forEach(button => {
@@ -37,5 +38,10 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
         }
     }
+
+    scrollButton.onclick = function(e) {
+        window.scrollTo(0, 0);
+    }
+
     menuButton.addEventListener('click', dropdown);
 });

@@ -116,6 +116,9 @@ li {
 .footer-searchbar {
     margin-top: 20px;
 }
+#scrollbutton {
+    margin-bottom: 20px;
+}
 
 /* Logo */
 .logo {
