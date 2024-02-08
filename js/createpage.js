@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
      * Navbar creation code
      ******************************************/
     const navContainer = document.createElement('div');
+    var title = document.title;
 
     // Create the unordered list for the navigation bar
     const navbar = document.createElement('ul');
@@ -20,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Create the logo image and append it to the navbar
     const logo = document.createElement('img');
     logo.className = 'logo';
-    logo.src = '../images/logo.png';
+    logo.src = (title === "Home") ? 'images/logo.png' : '../images/logo.png';
     logo.alt = 'wisconsinengineer';
     navbar.appendChild(logo);
 
@@ -51,17 +52,17 @@ document.addEventListener("DOMContentLoaded", function() {
     // Dropdown content
     const dropdownContent = document.createElement('div');
     const links = [
-        { href: '../index.html', text: 'Home' },
-        { href: '../pages/about.html', text: 'About' },
-        { href: '../pages/articles.html', text: 'Articles' },
-        { href: '../pages/team.html', text: 'Meet Our Team' },
-        { href: '../pages/connect.html', text: 'Connect' },
-        { href: '../pages/subscribe.html', text: 'Subscribe' }
+        { href: 'index.html', text: 'Home' },
+        { href: 'pages/about.html', text: 'About' },
+        { href: 'pages/articles.html', text: 'Articles' },
+        { href: 'pages/team.html', text: 'Meet Our Team' },
+        { href: 'pages/connect.html', text: 'Connect' },
+        { href: 'pages/subscribe.html', text: 'Subscribe' }
     ];
 
     links.forEach(link => {
         const a = document.createElement('a');
-        a.href = link.href;
+        a.href = (title === "Home") ?  link.href : '../' + link.href;
         a.className = 'navbarelements dropdown-content';
         a.textContent = link.text;
         dropdownContent.appendChild(a);
