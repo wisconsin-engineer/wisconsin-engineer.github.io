@@ -131,32 +131,60 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //updates a few size things
     function handleResize() {
-        const searchBar = document.querySelector('.search-bar');
-        const resultsButton = document.querySelector('.results');
-        const articleContainer = document.querySelector('.article-container');
-        if (searchBar.style.display != 'none') {
-            searchBar.style.display = lessThan90() ? 'flex' : 'grid';
-            searchBar.style.flexDirection = lessThan90() ? 'column' : 'none';
+        if (!isMobile()) {
+            const searchBar = document.querySelector('.search-bar');
+            const resultsButton = document.querySelector('.results');
+            const articleContainer = document.querySelector('.article-container');
+            if (searchBar.style.display != 'none') {
+                searchBar.style.display = lessThan90() ? 'flex' : 'grid';
+                searchBar.style.flexDirection = lessThan90() ? 'column' : 'none';
+            }
+            // labels and boxes align differently and have different widths
+            const labels = searchBar.querySelectorAll('.label');
+            labels.forEach(label => {
+                label.style.width = '285px';
+                label.style.textAlign = lessThan90() ? 'center' : 'left';
+                label.style.marginLeft = lessThan90() ? '0px' : '10px';
+            });
+            const boxes = searchBar.querySelectorAll('.select');
+            boxes.forEach(box => {
+                box.style.width = '285px';
+                box.style.textAlign = lessThan90() ? 'center' : 'left';
+                box.style.marginRight = lessThan90() ? '0px' : '10px';
+            });
+            // width of buttons changes per resolution
+            resultsButton.style.width = lessThan90() ? "280px": "400px";
+            resultsButton.style.minWidth = '280px';
+            resetButton.style.width = lessThan90() ? "280px": "400px";
+            resetButton.style.minWidth = '280px';
+            articleContainer.display = lessThan90() ? 'flex' : 'grid';
+        } else {
+            const searchBar = document.querySelector('.search-bar');
+            const resultsButton = document.querySelector('.results');
+            const articleContainer = document.querySelector('.article-container');
+            if (searchBar.style.display != 'none') {
+                searchBar.style.display = 'flex';
+                searchBar.style.flexDirection = 'column';
+            }
+            // labels and boxes align differently and have different widths
+            const labels = searchBar.querySelectorAll('.label');
+            labels.forEach(label => {
+                label.style.width = '285px';
+                label.style.textAlign = 'center';
+                label.style.marginLeft = '0px';
+            });
+            const boxes = searchBar.querySelectorAll('.select');
+            boxes.forEach(box => {
+                box.style.width = '285px';
+                box.style.textAlign = 'center';
+                box.style.marginRight = '0px';
+            });
+            // width of buttons changes per resolution
+            resultsButton.style.width = "280px";
+            resetButton.style.width = "280px";
+            articleContainer.display = 'flex';
+            articleContainer.flexDirection = 'column';
         }
-        // labels and boxes align differently and have different widths
-        const labels = searchBar.querySelectorAll('.label');
-        labels.forEach(label => {
-            label.style.width = '285px';
-            label.style.textAlign = lessThan90() ? 'center' : 'left';
-            label.style.marginLeft = lessThan90() ? '0px' : '10px';
-        });
-        const boxes = searchBar.querySelectorAll('.select');
-        boxes.forEach(box => {
-            box.style.width = '285px';
-            box.style.textAlign = lessThan90() ? 'center' : 'left';
-            box.style.marginRight = lessThan90() ? '0px' : '10px';
-        });
-        // width of buttons changes per resolution
-        resultsButton.style.width = lessThan90() ? "280px": "400px";
-        resultsButton.style.minWidth = '280px';
-        resetButton.style.width = lessThan90() ? "280px": "400px";
-        resetButton.style.minWidth = '280px';
-        articleContainer.display = lessThan90() ? 'flex' : 'grid';
     }
 
     function resetFilters() {
