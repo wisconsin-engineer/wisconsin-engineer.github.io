@@ -181,8 +181,8 @@ document.addEventListener("DOMContentLoaded", function() {
             });
             resultsButton.style.width = "280px";
             resetButton.style.width = "280px";
-            articleContainer.display = 'flex';
-            articleContainer.flexDirection = 'column';
+            articleContainer.style.display = 'flex';
+            articleContainer.style.flexDirection = 'column';
         }
     }
 
