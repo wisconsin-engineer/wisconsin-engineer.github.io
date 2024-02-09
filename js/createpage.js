@@ -87,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function() {
     footer.style.margin = '0';
     footer.style.paddingLeft = '20px';
     footer.style.paddingTop = '20px';
+    footer.style.marginTop = '20px';
 
     // Create the footer search bar
     const footerSearchbar = document.createElement('div');
