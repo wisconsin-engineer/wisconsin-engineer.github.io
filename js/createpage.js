@@ -83,6 +83,10 @@ document.addEventListener("DOMContentLoaded", function() {
      ***********************************************/
     const footer = document.createElement('div');
     footer.className = 'footer';
+    footer.style.backgroundColor = '#3232';
+    footer.style.margin = '0';
+    footer.style.paddingLeft = '20px';
+    footer.style.paddingTop = '20px';
 
     // Create the footer search bar
     const footerSearchbar = document.createElement('div');

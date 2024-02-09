@@ -2,6 +2,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 10px;
+    column-gap: 10px;
+    margin: 10px;
+    margin-bottom:0;
 }
 .picture {
     width: 75%;
@@ -19,6 +22,7 @@
 }
 .text-area {
     padding:5%;
+    padding-top: 0;
 }
 .schedule {
     display: grid;
