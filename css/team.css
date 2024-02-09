@@ -1,0 +1,19 @@
+.biography-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 10px;
+}
+.picture {
+    width: 75%;
+}
+.biocard {
+    text-align: center;
+    border: 1px solid #000000;
+    padding: 10px;
+}
+.biocard p {
+    text-align: left;
+}
+.linkedin-link {
+    width: 50px;
+}
