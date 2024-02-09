@@ -17,3 +17,13 @@
 .linkedin-link {
     width: 50px;
 }
+.text-area {
+    padding:5%;
+}
+.schedule {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 75%;
+    border: 1px solid #000000;
+    padding: 20px;
+}
