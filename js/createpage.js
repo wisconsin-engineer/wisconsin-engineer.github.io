@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { href: 'pages/about.html', text: 'About' },
         { href: 'pages/articles.html', text: 'Articles' },
         { href: 'pages/team.html', text: 'Meet Our Team' },
+        { href: 'pages/crossword.html', text: 'Crossword'},
         { href: 'pages/connect.html', text: 'Connect' },
         { href: 'pages/subscribe.html', text: 'Subscribe' }
     ];
