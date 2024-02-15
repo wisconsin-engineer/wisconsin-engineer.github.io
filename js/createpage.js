@@ -99,6 +99,51 @@ document.addEventListener("DOMContentLoaded", function() {
     // Append the navbar to the container and add it to the beginning of the page
     navContainer.appendChild(navbar);
     document.body.prepend(navContainer);
+
+    /***********************************************
+     * Comment section code for articles pages
+     ***********************************************/
+    if (title.includes("Article:")) {
+        // Create form element
+        var form = document.createElement("form");
+        form.action = "https://formspree.io/f/xrgnqlab";
+        form.method = "POST";
+
+        // Create email label and input
+        var emailLabel = document.createElement("label");
+        emailLabel.textContent = "Your email:";
+        var emailInput = document.createElement("input");
+        emailInput.type = "email";
+        emailInput.name = "email";
+        emailLabel.appendChild(emailInput);
+
+        // Create message label and textarea
+        var messageLabel = document.createElement("label");
+        messageLabel.textContent = "Your message:";
+        var messageInput = document.createElement("textarea");
+        messageInput.name = "message";
+        messageLabel.appendChild(messageInput);
+
+        // Create hidden input for page title
+        var hiddenInput = document.createElement("input");
+        hiddenInput.type = "hidden";
+        hiddenInput.name = "page_title";
+        hiddenInput.value = "Template page";
+
+        // Create submit button
+        var submitButton = document.createElement("button");
+        submitButton.type = "submit";
+        submitButton.textContent = "Send";
+
+        // Append elements to form
+        form.appendChild(emailLabel);
+        form.appendChild(messageLabel);
+        form.appendChild(hiddenInput);
+        form.appendChild(submitButton);
+
+        // Append form to div
+        document.querySelector(".comment-section").appendChild(form);
+    }
     
     /************************************************
      * Footer creation code
