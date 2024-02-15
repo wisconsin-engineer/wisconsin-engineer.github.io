@@ -25,6 +25,14 @@ document.addEventListener("DOMContentLoaded", function() {
             biographyContainer.style.width = lessThan90() ? '50%' : '75%';
             biographyContainer.style.paddingLeft = lessThan90() ? '25%' : '12.5%';
             biographyContainer.style.flexDirection = lessThan90() ? 'column' : 'none';
+            const pictureCards = document.querySelectorAll('.picture-card');
+            pictureCards.forEach(pictureCard => {
+                pictureCard.style.height = lessThan90() ? '250px' : '350px';
+            });
+            const pictures = document.querySelectorAll('.picture');
+            pictures.forEach(picture => {
+                picture.style.width = lessThan90() ? '250px' : '350px';
+            });
         }
     }
 
