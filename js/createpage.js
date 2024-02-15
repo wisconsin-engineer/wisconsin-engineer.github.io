@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Add copyright
     const copyright = document.createElement('h4');
-    copyright.innerHTML = '&copy; 2024 Wisconsin Engineer Magazine';
+    copyright.innerHTML = '&copy; 2024 Wisconsin Engineer Magazine | <a href="https://digital.library.wisc.edu/1711.dl/7P3DBZ6M5SIJV8I" target="_blank">Archive</a>';
     footer.appendChild(copyright);
 
     // Add 'scroll to top' button
