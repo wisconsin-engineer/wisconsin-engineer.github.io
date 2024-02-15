@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
     navbar.appendChild(anchor);
 
     // Create the search bar and append it to the navbar, not needed at the moment
-    /*
+    /**
     const searchbar = document.createElement('div');
     searchbar.className = 'searchbar';
     const input = document.createElement('input');
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
     searchbar.appendChild(input);
     searchbar.appendChild(button1);
     navbar.appendChild(searchbar);
-    */
+    /**/
 
     // Create the dropdown menu
     const dropdown = document.createElement('li');
@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function() {
     footer.appendChild(socialMediaBox);
 
     // Create the footer search bar, not needed at the moment
-    /*
+    /**
     const footerSearchbar = document.createElement('div');
     footerSearchbar.className = 'footer-searchbar';
     const input2 = document.createElement('input');
@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function() {
     footerSearchbar.appendChild(input2);
     footerSearchbar.appendChild(button2);
     footer.appendChild(footerSearchbar);
-    */
+    /**/
 
     // Add recent posts section
     const recentPostsTitle = document.createElement('h2');
