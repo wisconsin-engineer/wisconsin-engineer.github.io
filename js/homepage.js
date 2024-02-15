@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function() {
         contentContainer.style.display = 'flex';
         contentContainer.style.flexDirection = 'column';
         contentContainer.style.width = '75%';
-        contentContainer.style.paddingLeft = '12.5%';
     }
 
     // updates a few size things
@@ -22,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function() {
             const contentContainer = document.querySelector('.content-container');
             contentContainer.style.display = lessThan90() ? 'flex' : 'grid';
             contentContainer.style.width = lessThan90() ? '50%' : '75%';
-            contentContainer.style.paddingLeft = lessThan90() ? '25%' : '12.5%';
             contentContainer.style.flexDirection = lessThan90() ? 'column' : 'none';
         }
     }
