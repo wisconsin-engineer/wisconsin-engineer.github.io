@@ -8,11 +8,26 @@
 // after page is loaded, create everything
 document.addEventListener("DOMContentLoaded", function() {
 
+    var title = document.title;
+
+    /******************************************
+     * Adding a few things to the head of pages
+     ******************************************/
+    var link = document.createElement('link');
+
+    // Set the attributes for the link element
+    link.rel = 'icon';
+    link.href = (title === "Home") ? 'images/icons/logo.png' : '../images/icons/logo.png';
+    link.href = title.includes("Article:") ? '../../images/icons/logo.png' : link.href;
+    link.type = 'image/png';
+
+    // Append the link element to the head of the document
+    document.head.appendChild(link);
+
     /******************************************
      * Navbar creation code
      ******************************************/
     const navContainer = document.createElement('div');
-    var title = document.title;
 
     // Create the unordered list for the navigation bar
     const navbar = document.createElement('ul');
