@@ -96,6 +96,55 @@ document.addEventListener("DOMContentLoaded", function() {
     footer.style.paddingTop = '20px';
     footer.style.marginTop = '20px';
 
+    // Add social media links
+    const socialMediaBox = document.createElement('div');
+
+    // Instagram logo creation
+    const instagram = document.createElement('a');
+    instagram.href = 'https://www.instagram.com/thewisconsinengineer/';
+    const instagramIcon = document.createElement('img');
+    instagramIcon.style.width = '50px';
+    instagramIcon.src = (title === "Home") ? 'images/instagram.png' : '../images/instagram.png';
+    instagramIcon.src = title.includes("Article:") ? '../../images/instagram.png' : instagramIcon.src;
+    instagramIcon.alt = 'Instagram';
+    instagram.appendChild(instagramIcon); // Append the Instagram icon to the anchor
+
+    // Twitter logo creation
+    const twitter = document.createElement('a');
+    twitter.href = 'https://twitter.com/wiscengrmag?lang=en';
+    const twitterIcon = document.createElement('img');
+    twitterIcon.style.width = '50px';
+    twitterIcon.src = (title === "Home") ? 'images/twitter.png' : '../images/twitter.png';
+    twitterIcon.src = title.includes("Article:") ? '../../images/instagram.png' : twitterIcon.src;
+    twitterIcon.alt = 'Twitter';
+    twitter.appendChild(twitterIcon); // Append the Twitter icon to the anchor
+
+    // Facebook logo creation
+    const facebook = document.createElement('a');
+    facebook.href = 'https://www.facebook.com/WiscEngrMag';
+    const facebookIcon = document.createElement('img');
+    facebookIcon.style.width = '50px';
+    facebookIcon.src = (title === "Home") ? 'images/facebook.png' : '../images/facebook.png';
+    facebookIcon.src = title.includes("Article:") ? '../../images/instagram.png' : facebookIcon.src;
+    facebookIcon.alt = 'Facebook';
+    facebook.appendChild(facebookIcon); // Append the Facebook icon to the anchor
+
+    // YouTube logo creation
+    const youtube = document.createElement('a');
+    youtube.href = 'https://www.youtube.com/channel/UCyxWH_OPZ0pqJXxewkZAqpw';
+    const youtubeIcon = document.createElement('img');
+    youtubeIcon.style.width = '50px';
+    youtubeIcon.src = (title === "Home") ? 'images/youtube.png' : '../images/youtube.png';
+    youtubeIcon.src = title.includes("Article:") ? '../../images/instagram.png' : youtubeIcon.src;
+    youtubeIcon.alt = 'YouTube';
+    youtube.appendChild(youtubeIcon); // Append the YouTube icon to the anchor
+
+    socialMediaBox.appendChild(instagram);
+    socialMediaBox.appendChild(twitter);
+    socialMediaBox.appendChild(facebook);
+    socialMediaBox.appendChild(youtube);
+    footer.appendChild(socialMediaBox);
+
     // Create the footer search bar, not needed at the moment
     /*
     const footerSearchbar = document.createElement('div');
