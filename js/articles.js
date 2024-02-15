@@ -1,5 +1,6 @@
 /**
- * Logic for the articles page (do not touch)
+ * Logic for the articles page (do not touch or it will break)
+ * Lots of very intertwined functions and identifiers
  */
 document.addEventListener("DOMContentLoaded", function() {
 

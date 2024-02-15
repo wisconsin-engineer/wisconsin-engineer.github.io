@@ -1,3 +1,7 @@
+/*
+ * Collapses home page content into a single column in windowed mode and on mobile
+ */
+
 // after page is loaded, edit layout of grid to match size of screen
 document.addEventListener("DOMContentLoaded", function() {
 

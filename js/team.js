@@ -1,3 +1,8 @@
+/*
+ * Used for the team page, will collapse grid into single cell wide on mobile and windowed mode
+ *
+ */
+
 // after page is loaded, edit layout of grid to match size of screen
 document.addEventListener("DOMContentLoaded", function() {
 
