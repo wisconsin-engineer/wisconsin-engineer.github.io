@@ -182,6 +182,7 @@ document.addEventListener("DOMContentLoaded", function() {
     recentPostsTitle.textContent = 'Recent Posts';
     footer.appendChild(recentPostsTitle);
 
+    // TODO update this whenever adding new posts!
     const postsList = document.createElement('ul');
     const posts = [
         { href: '#', text: 'Title of post 1' },
