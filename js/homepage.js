@@ -5,21 +5,21 @@ document.addEventListener("DOMContentLoaded", function() {
         window.addEventListener('resize', handleResize);
         handleResize();
     } else {
-        const biographyContainer = document.querySelector('.biography-container');
-        biographyContainer.style.display = 'flex';
-        biographyContainer.style.flexDirection = 'column';
-        biographyContainer.style.width = '75%';
-        biographyContainer.style.paddingLeft = '12.5%';
+        const contentContainer = document.querySelector('.content-container');
+        contentContainer.style.display = 'flex';
+        contentContainer.style.flexDirection = 'column';
+        contentContainer.style.width = '75%';
+        contentContainer.style.paddingLeft = '12.5%';
     }
 
     // updates a few size things
     function handleResize() {
         if (!isMobile()) {
-            const biographyContainer = document.querySelector('.biography-container');
-            biographyContainer.style.display = lessThan90() ? 'flex' : 'grid';
-            biographyContainer.style.width = lessThan90() ? '50%' : '75%';
-            biographyContainer.style.paddingLeft = lessThan90() ? '25%' : '12.5%';
-            biographyContainer.style.flexDirection = lessThan90() ? 'column' : 'none';
+            const contentContainer = document.querySelector('.content-container');
+            contentContainer.style.display = lessThan90() ? 'flex' : 'grid';
+            contentContainer.style.width = lessThan90() ? '50%' : '75%';
+            contentContainer.style.paddingLeft = lessThan90() ? '25%' : '12.5%';
+            contentContainer.style.flexDirection = lessThan90() ? 'column' : 'none';
         }
     }
 

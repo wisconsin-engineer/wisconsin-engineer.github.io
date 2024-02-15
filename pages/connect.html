@@ -7,6 +7,7 @@
 
         <!-- Scripts needed for every page, copy to each page created  -->
         <script src="../js/createpage.js"></script>
+        <script src="../js/connect.js"></script>
 
         <!-- Meta information, update title per page -->
         <title>Connect</title>
@@ -28,14 +29,49 @@
 
         <!-- this section is unique to each page, when creating page-specific elements use the page-specific stylesheets and scripts -->
         <div class="content-body">
-            <h1 class="title">Connect</h1>
-            <div class="text-area">
-                <h3>Editors in Chief</h3>
-                <p><a href="mailto:ljsteffes@wisc.edu">Lucy Steffes</a> and <a href="mailto:lmsmith32@wisc.edu">Laila Smith</a></p>
-                <h3>Office:</h3>
-                <p>M1066 Engineering Centers Building<br>1550 Engineering Drive<br>Madison, WI 53705
-                </p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5829.02020965926!2d-89.413471!3d43.07277!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8807acc138706fcb%3A0x966e560d210b4fe2!2sEngineering%20Centers%20Bldg%2C%201550%20Engineering%20Dr%2C%20Madison%2C%20WI%2053706!5e0!3m2!1sen!2sus!4v1707438902984!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <h1 class="title">Connect/Subscribe</h1>
+            <div class="content-container">
+                <!-- Connection stuff -->
+                <div class="content-card">
+                    <h3>Editors in Chief</h3>
+                    <p><a href="mailto:ljsteffes@wisc.edu">Lucy Steffes</a> and <a href="mailto:lmsmith32@wisc.edu">Laila Smith</a></p>
+                    <h3>For Website Inquiries</h3>
+                    <p><a href="mailto:cmaggard@wisc.edu">Colin Maggard</a></p>
+                    <h3>Office:</h3>
+                    <p>M1066 Engineering Centers Building<br>1550 Engineering Drive<br>Madison, WI 53705
+                    </p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5829.02020965926!2d-89.413471!3d43.07277!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8807acc138706fcb%3A0x966e560d210b4fe2!2sEngineering%20Centers%20Bldg%2C%201550%20Engineering%20Dr%2C%20Madison%2C%20WI%2053706!5e0!3m2!1sen!2sus!4v1707438902984!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <!-- Subscription stuff -->
+                <div class="content-card">
+                    <p>
+                        The Wisconsin Engineer Magazine staff publishes print issues twice-yearly, once at the conclusion of the Spring semester and once at conclusion of the Fall semester.
+                        <br><br>Annual subscriptions for the Wisconsin Engineer are $20. Distribution lists are compiled at the time of publication, and therefore your subscription must be active at the time of publication (beginning of May, beginning of December) to receive that respective issue of the Wisconsin Engineer.
+                        <br><br>Please note that the arrival of your magazine depends on the postal office and it may take two weeks or more for the magazine to reach your doorstep. If you have any questions about your subscription, please contact us via the “Contact Us” page.
+                        <br><br>Subscribe by following the links below to PayPal. All funds go directly to Wisconsin Engineer Magazine operations. Thank you for supporting our publication!
+                    </p>
+                    <div id="paypal-button-container-P-8AG83334XM641921KMVXKO5Y"></div>
+                    <script src="https://www.paypal.com/sdk/js?client-id=AXs4SsopqCQSmBS0NqjBtMCDXB1FX-t4tlKJXc-UWhhEd8uJE5Eqgo6ryFFbWUcBK1ZKR8cGFkIisLQ8&#038;vault=true&#038;intent=subscription" data-sdk-integration-source="button-factory"></script>
+                    <script>
+                    paypal.Buttons({
+                        style: {
+                            shape: 'rect',
+                            color: 'gold',
+                            layout: 'vertical',
+                            label: 'paypal'
+                        },
+                        createSubscription: function(data, actions) {
+                            return actions.subscription.create({
+                            /* Creates the subscription */
+                            plan_id: 'P-8AG83334XM641921KMVXKO5Y'
+                            });
+                        },
+                        onApprove: function(data, actions) {
+                            alert(data.subscriptionID); // You can add optional success message for the subscriber here
+                        }
+                    }).render('#paypal-button-container-P-8AG83334XM641921KMVXKO5Y'); // Renders the PayPal button
+                    </script>
+                </div>
             </div>
         </div>
     </body>
