@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function() {
     anchor.href = (title === "Home") ? 'index.html' : '../index.html';
     anchor.href = title.includes("Article:") ? '../../index.html' : anchor.href;
     logo.className = 'logo';
-    logo.src = (title === "Home") ? 'images/logo.png' : '../images/logo.png';
-    logo.src = title.includes("Article:") ? '../../images/logo.png' : logo.src;
+    logo.src = (title === "Home") ? 'images/icons/logo.png' : '../images/icons/logo.png';
+    logo.src = title.includes("Article:") ? '../../images/icons/logo.png' : logo.src;
     logo.alt = 'wisconsinengineer';
     anchor.appendChild(logo);
     navbar.appendChild(anchor);
@@ -104,8 +104,8 @@ document.addEventListener("DOMContentLoaded", function() {
     instagram.href = 'https://www.instagram.com/thewisconsinengineer/';
     const instagramIcon = document.createElement('img');
     instagramIcon.style.width = '50px';
-    instagramIcon.src = (title === "Home") ? 'images/instagram.png' : '../images/instagram.png';
-    instagramIcon.src = title.includes("Article:") ? '../../images/instagram.png' : instagramIcon.src;
+    instagramIcon.src = (title === "Home") ? 'images/icons/instagram.png' : '../images/icons/instagram.png';
+    instagramIcon.src = title.includes("Article:") ? '../../images/icons/instagram.png' : instagramIcon.src;
     instagramIcon.alt = 'Instagram';
     instagram.appendChild(instagramIcon); // Append the Instagram icon to the anchor
 
@@ -114,8 +114,8 @@ document.addEventListener("DOMContentLoaded", function() {
     twitter.href = 'https://twitter.com/wiscengrmag?lang=en';
     const twitterIcon = document.createElement('img');
     twitterIcon.style.width = '50px';
-    twitterIcon.src = (title === "Home") ? 'images/twitter.png' : '../images/twitter.png';
-    twitterIcon.src = title.includes("Article:") ? '../../images/instagram.png' : twitterIcon.src;
+    twitterIcon.src = (title === "Home") ? 'images/icons/twitter.png' : '../images/icons/twitter.png';
+    twitterIcon.src = title.includes("Article:") ? '../../images/icons/instagram.png' : twitterIcon.src;
     twitterIcon.alt = 'Twitter';
     twitter.appendChild(twitterIcon); // Append the Twitter icon to the anchor
 
@@ -124,8 +124,8 @@ document.addEventListener("DOMContentLoaded", function() {
     facebook.href = 'https://www.facebook.com/WiscEngrMag';
     const facebookIcon = document.createElement('img');
     facebookIcon.style.width = '50px';
-    facebookIcon.src = (title === "Home") ? 'images/facebook.png' : '../images/facebook.png';
-    facebookIcon.src = title.includes("Article:") ? '../../images/instagram.png' : facebookIcon.src;
+    facebookIcon.src = (title === "Home") ? 'images/icons/facebook.png' : '../images/icons/facebook.png';
+    facebookIcon.src = title.includes("Article:") ? '../../images/icons/instagram.png' : facebookIcon.src;
     facebookIcon.alt = 'Facebook';
     facebook.appendChild(facebookIcon); // Append the Facebook icon to the anchor
 
@@ -134,8 +134,8 @@ document.addEventListener("DOMContentLoaded", function() {
     youtube.href = 'https://www.youtube.com/channel/UCyxWH_OPZ0pqJXxewkZAqpw';
     const youtubeIcon = document.createElement('img');
     youtubeIcon.style.width = '50px';
-    youtubeIcon.src = (title === "Home") ? 'images/youtube.png' : '../images/youtube.png';
-    youtubeIcon.src = title.includes("Article:") ? '../../images/instagram.png' : youtubeIcon.src;
+    youtubeIcon.src = (title === "Home") ? 'images/icons/youtube.png' : '../images/icons/youtube.png';
+    youtubeIcon.src = title.includes("Article:") ? '../../images/icons/youtube.png' : youtubeIcon.src;
     youtubeIcon.alt = 'YouTube';
     youtube.appendChild(youtubeIcon); // Append the YouTube icon to the anchor
 
