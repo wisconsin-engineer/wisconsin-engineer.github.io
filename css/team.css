@@ -4,14 +4,9 @@
     row-gap: 30px;
     column-gap: 10px;
     margin-bottom:50px;
-    width: 75%;
-    padding-left: 12.5%;
-}
-.picture {
-    width: 75%;
+    background-color: #df3636;
 }
 .picture-card {
-    height: 350px;
     margin-top: 10px;
 }
 .biocard {
@@ -19,6 +14,7 @@
     border: 1px solid #000000;
     padding: 10px;
     height: 100%;
+    background-color: #d39191;
 }
 .biocard p {
     text-align: left;

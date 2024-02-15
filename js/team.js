@@ -23,15 +23,15 @@ document.addEventListener("DOMContentLoaded", function() {
             const biographyContainer = document.querySelector('.biography-container');
             biographyContainer.style.display = lessThan90() ? 'flex' : 'grid';
             biographyContainer.style.width = lessThan90() ? '50%' : '75%';
-            biographyContainer.style.paddingLeft = lessThan90() ? '25%' : '12.5%';
+            biographyContainer.style.margin = '0 auto 50px';            
             biographyContainer.style.flexDirection = lessThan90() ? 'column' : 'none';
             const pictureCards = document.querySelectorAll('.picture-card');
             pictureCards.forEach(pictureCard => {
-                pictureCard.style.height = lessThan90() ? '250px' : '350px';
+                pictureCard.style.height = lessThan90() ? '250px' : '300px';
             });
             const pictures = document.querySelectorAll('.picture');
             pictures.forEach(picture => {
-                picture.style.width = lessThan90() ? '250px' : '350px';
+                picture.style.width = lessThan90() ? '250px' : '300px';
             });
         }
     }
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const windowWidth = window.innerWidth;
         const threshold = 0.25 * screenWidth;
     
-        // less than 90% of the max screen width, then set as columns
+        // less than 75% of the max screen width, then set as columns (i didnt feel like changing the name)
         return (windowWidth < screenWidth - threshold);
     }
 
