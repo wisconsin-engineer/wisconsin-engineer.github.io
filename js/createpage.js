@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const twitterIcon = document.createElement('img');
     twitterIcon.style.width = '50px';
     twitterIcon.src = (title === "Home") ? 'images/icons/twitter.png' : '../images/icons/twitter.png';
-    twitterIcon.src = title.includes("Article:") ? '../../images/icons/instagram.png' : twitterIcon.src;
+    twitterIcon.src = title.includes("Article:") ? '../../images/icons/twitter.png' : twitterIcon.src;
     twitterIcon.alt = 'Twitter';
     twitter.appendChild(twitterIcon); // Append the Twitter icon to the anchor
 
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const facebookIcon = document.createElement('img');
     facebookIcon.style.width = '50px';
     facebookIcon.src = (title === "Home") ? 'images/icons/facebook.png' : '../images/icons/facebook.png';
-    facebookIcon.src = title.includes("Article:") ? '../../images/icons/instagram.png' : facebookIcon.src;
+    facebookIcon.src = title.includes("Article:") ? '../../images/icons/facebook.png' : facebookIcon.src;
     facebookIcon.alt = 'Facebook';
     facebook.appendChild(facebookIcon); // Append the Facebook icon to the anchor
 
