@@ -1,0 +1,25 @@
+.content-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+    column-gap: 10px;
+    margin-bottom:0;
+    width: 75%;
+    padding-left: 12.5%;
+    margin-top: 10px;;
+    text-align: center;
+}
+.content-card {
+    padding-top: 0;
+    padding-bottom: 10px;
+    height:100%;
+}
+#magazine-cover {
+    width:50%;
+}
+#homelogo {
+    width: 25%;
+    padding-left: 37.5%;
+    margin-top: 30px;
+
+}

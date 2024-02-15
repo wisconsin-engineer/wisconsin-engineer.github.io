@@ -19,12 +19,16 @@ document.addEventListener("DOMContentLoaded", function() {
     navbar.className = 'navbar';
 
     // Create the logo image and append it to the navbar
+    const anchor = document.createElement('a');
     const logo = document.createElement('img');
+    anchor.href = (title === "Home") ? 'index.html' : '../index.html';
+    anchor.href = title.includes("Article:") ? '../../index.html' : anchor.href;
     logo.className = 'logo';
     logo.src = (title === "Home") ? 'images/logo.png' : '../images/logo.png';
     logo.src = title.includes("Article:") ? '../../images/logo.png' : logo.src;
     logo.alt = 'wisconsinengineer';
-    navbar.appendChild(logo);
+    anchor.appendChild(logo);
+    navbar.appendChild(anchor);
 
     // Create the search bar and append it to the navbar
     const searchbar = document.createElement('div');
@@ -59,8 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { href: 'pages/articles.html', text: 'Articles' },
         { href: 'pages/crossword.html', text: 'Crossword'},
         { href: 'pages/photocontest.html', text: 'Photo Contest'},
-        { href: 'pages/connect.html', text: 'Connect'},
-        { href: 'pages/subscribe.html', text: 'Subscribe' }
+        { href: 'pages/connect.html', text: 'Connect/Subscribe'}
     ];
 
     links.forEach(link => {

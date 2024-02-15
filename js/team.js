@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const biographyContainer = document.querySelector('.biography-container');
         biographyContainer.style.display = 'flex';
         biographyContainer.style.flexDirection = 'column';
-        biographyContainer.style.width = '50%';
-        biographyContainer.style.paddingLeft = '25%';
+        biographyContainer.style.width = '75%';
+        biographyContainer.style.paddingLeft = '12.5%';
     }
 
 
