@@ -104,6 +104,12 @@ document.addEventListener("DOMContentLoaded", function() {
      * Comment section code for articles pages
      ***********************************************/
     if (title.includes("Article:")) {
+        
+        var h3 = document.createElement("h3");
+        h3.textContent = "Leave a Comment!";
+        var h4 = document.createElement("h4");
+        h4.textContent = "Comments are moderated, please be respectful.";
+
         // Create form element
         var form = document.createElement("form");
         form.action = "https://formspree.io/f/xrgnqlab";
@@ -142,6 +148,8 @@ document.addEventListener("DOMContentLoaded", function() {
         form.appendChild(submitButton);
 
         // Append form to div
+        document.querySelector(".comment-section").appendChild(h3);
+        document.querySelector(".comment-section").appendChild(h4);
         document.querySelector(".comment-section").appendChild(form);
     }
     
