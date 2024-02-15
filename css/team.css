@@ -1,9 +1,9 @@
 .biography-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 10px;
+    row-gap: 30px;
     column-gap: 10px;
-    margin-bottom:0;
+    margin-bottom:50px;
     width: 75%;
     padding-left: 12.5%;
 }
@@ -11,12 +11,14 @@
     width: 75%;
 }
 .picture-card {
-    height: 50%;
+    height: 35%;
+    margin-top: 10px;
 }
 .biocard {
     text-align: center;
     border: 1px solid #000000;
     padding: 10px;
+    height: 100%;
 }
 .biocard p {
     text-align: left;
