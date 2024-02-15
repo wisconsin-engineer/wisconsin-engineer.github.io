@@ -55,8 +55,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const links = [
         { href: 'index.html', text: 'Home' },
         { href: 'pages/about.html', text: 'About' },
-        { href: 'pages/articles.html', text: 'Articles' },
         { href: 'pages/team.html', text: 'Meet Our Team' },
+        { href: 'pages/articles.html', text: 'Articles' },
         { href: 'pages/crossword.html', text: 'Crossword'},
         { href: 'pages/photocontest.html', text: 'Photo Contest'},
         { href: 'pages/connect.html', text: 'Connect'},
