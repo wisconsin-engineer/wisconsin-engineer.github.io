@@ -1,24 +1,14 @@
 {
     "articles": [
       {
-        "title": "The Future of Technology",
-        "type": "Opinion",
-        "category": "Technology",
-        "author": "Jane Doe",
+        "title": "NAME OF ARTICLE GOES HERE",
+        "type": "Template",
+        "category": "Instructional",
+        "author": "Colin Maggard",
         "season": "sp24",
-        "date": "February 19th, 2024",
-        "description": "An in-depth look at emerging technologies and their potential impacts on the world.",
-        "link": "https://example.com/future-of-technology"
-      },
-      {
-        "title": "Understanding Climate Change",
-        "type": "Research",
-        "category": "Environment",
-        "author": "John Smith",
-        "season": "sp24",
-        "date": "February 9th, 2024",
-        "description": "A comprehensive overview of climate change, its causes, and its effects on our planet.",
-        "link": "https://example.com/understanding-climate-change"
+        "date": "February 15th, 2024",
+        "description": "A page demonstrating how the articles will be constructed on the website.",
+        "link": "../../articles/template/template.html"
       }
     ]
   }  

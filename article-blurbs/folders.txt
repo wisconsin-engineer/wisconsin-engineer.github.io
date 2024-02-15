@@ -1,1 +1,1 @@
-sp24,fa23
+template,sp24,fa23

@@ -1,6 +1,27 @@
-.text-area {
-    text-align: center;
+.info-area {
+    width: 75%;
+    margin: 50px auto;
 }
-.image-area {
-    margin: 0 auto;
+.info-area h1 {
+    font-size: 50px;
+    margin:10px 0px 10px 0px;
+}
+.info-area h2 {
+    font-size: 20px;
+    margin:0;
+}
+.info-area h3 {
+    font-size: 20px;
+    margin:0;
+}
+.header-image-area {
+    margin: 30px auto;
+    width: 75%;
+}
+.header-image {
+    width:100%;
+}
+.article-body {
+    width:75%;
+    margin:10px auto;
 }
