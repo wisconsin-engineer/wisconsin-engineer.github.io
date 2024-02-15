@@ -1,0 +1,27 @@
+.content-body {
+    width: 75%;
+    padding-left: 12.5%;
+}
+.photo-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+    margin-bottom:0;
+    width: 75%;
+    padding-left: 12.5%;
+}
+.picture {
+    width: 75%;
+}
+.picture-card {
+    height: 50%;
+}
+.rules-container ul li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.rules-container h3 {
+    text-align: center;
+}
