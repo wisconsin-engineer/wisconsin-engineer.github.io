@@ -15,6 +15,14 @@ document.addEventListener("DOMContentLoaded", function() {
         biographyContainer.style.flexDirection = 'column';
         biographyContainer.style.width = '75%';
         biographyContainer.style.paddingLeft = '12.5%';
+        const pictureCards = document.querySelectorAll('.picture-card');
+        pictureCards.forEach(pictureCard => {
+            pictureCard.style.height = '250px';
+        });
+        const pictures = document.querySelectorAll('.picture');
+        pictures.forEach(picture => {
+            picture.style.width = '250px';
+        });
     }
 
     // updates a few size things
