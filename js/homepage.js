@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
         contentContainer.style.display = 'flex';
         contentContainer.style.flexDirection = 'column';
         contentContainer.style.width = '75%';
+        const IGEmbed = document.querySelector('.instagram-embed');
         IGEmbed.style.width = '50%';
     }
 
