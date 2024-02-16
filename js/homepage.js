@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
         contentContainer.style.display = 'flex';
         contentContainer.style.flexDirection = 'column';
         contentContainer.style.width = '75%';
+        IGEmbed.style.width = '50%';
     }
 
     // updates a few size things
@@ -22,6 +23,8 @@ document.addEventListener("DOMContentLoaded", function() {
             contentContainer.style.display = lessThan90() ? 'flex' : 'grid';
             contentContainer.style.width = lessThan90() ? '50%' : '75%';
             contentContainer.style.flexDirection = lessThan90() ? 'column' : 'none';
+            const IGEmbed = document.querySelector('.instagram-embed');
+            IGEmbed.style.width = '75%';
         }
     }
 
