@@ -140,11 +140,14 @@ document.addEventListener("DOMContentLoaded", function() {
         var submitButton = document.createElement("button");
         submitButton.type = "submit";
         submitButton.textContent = "Send";
-
         // Append elements to form
         form.appendChild(emailLabel);
+        const pageBreak = document.createElement("br");
+        const pageBreak2 = document.createElement("br");
+        form.appendChild(pageBreak);
         form.appendChild(messageLabel);
         form.appendChild(hiddenInput);
+        form.appendChild(pageBreak2);
         form.appendChild(submitButton);
 
         // Append form to div
