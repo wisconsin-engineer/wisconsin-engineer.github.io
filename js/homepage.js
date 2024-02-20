@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
         contentContainer.style.flexDirection = 'column';
         contentContainer.style.width = '75%';
         const IGEmbed = document.querySelector('.instagram-embed');
-        IGEmbed.style.width = '50%';
+        IGEmbed.style.width = '25%';
     }
 
     // updates a few size things
