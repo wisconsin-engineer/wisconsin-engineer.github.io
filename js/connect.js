@@ -24,6 +24,8 @@ document.addEventListener("DOMContentLoaded", function() {
             contentContainer.style.width = lessThan90() ? '50%' : '75%';
             contentContainer.style.paddingLeft = lessThan90() ? '25%' : '12.5%';
             contentContainer.style.flexDirection = lessThan90() ? 'column' : 'none';
+            const mapEmbed = document.querySelector('.map-embed');
+            mapEmbed.style.height = lessThan90() ? '400px' : '50%';
         }
     }
 
