@@ -2,7 +2,7 @@
 Remaking the site from scratch in order to reduce load times, increase collaborative potential, and implement modularity so that the system can be easily understood and worked with.
 
 ## How to get started (recommended)
-- Contact me at maggardcolin@gmail.com and I'll get your GitHub account added as a contributor to the organization, which will allow you to work on this site.
+- Contact me at cmaggard@wisc.edu and I'll get your GitHub account added as a contributor to the organization, which will allow you to work on this site.
 - Download VSCode, and the following extensions using the Extensions tab: "Remote Repositories" by Microsoft, "Live Preview" by Microsoft, and "HTML CSS Support" by ecmel.
 
 ## Things you can do
@@ -13,4 +13,4 @@ Remaking the site from scratch in order to reduce load times, increase collabora
 - Push directly to main, this helps avoid messing up the entire site, also when you push to main the changes are made live within 2 minutes!
 - Touch anything in the "js" folder; these scripts may completely mess up the website if messed with
 
-### If you have any questions about how this works, feel free to contact me at maggardcolin@gmail.com and I'll get back to you at some point.
+### If you have any questions about how this works, feel free to contact me at cmaggard@wisc.edu and I'll get back to you at some point.
