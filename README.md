@@ -9,7 +9,7 @@ Remaking the site from scratch in order to reduce load times, increase collabora
 - Check through the list of issues on the repo and create a branch in order to work on one (1) issue at a time. We do this so that the site doesn't break and so that the versions don't get ridiculously complicated.
 - Add more files to the "article-blurbs" folders, each season folder has an associated blurbs.json file that contains the information necessary for article blurbs on the Articles page, fill them out as best as you can with the given templates.
 
-## Things you cannot do
+## Don't:
 - Push directly to main, this helps avoid messing up the entire site, also when you push to main the changes are made live within 2 minutes!
 - Touch anything in the "js" folder; these scripts may completely mess up the website if messed with
 
