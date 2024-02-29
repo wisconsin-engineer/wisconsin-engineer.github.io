@@ -39,6 +39,9 @@ li {
 }
 
 /* Navbar */
+.navbar-container {
+    top: 0;
+}
 .navbar {
     list-style-type: none;
     margin: 0;
@@ -73,14 +76,13 @@ li {
 }
 .drop-button {
     cursor: pointer;
-    font-size: 16px;  
+    font-size: 16px;
     border: none;
     outline: none;
     color: rgb(255, 0, 0);
     padding: 20px 16px;
     background-color: inherit;
     font-family: inherit;
-    margin: 0;
     width: 100%;
     text-align: left;
     padding-left: 20px;
@@ -120,8 +122,8 @@ li {
 /* Logo */
 .logo {
     width: 100px;
-    float: left;
-    margin-left: 15px;
+    margin-left: 10px;
+    margin-top: 5px;
 }
 
 /* header searchbar */

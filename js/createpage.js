@@ -33,6 +33,8 @@ document.addEventListener("DOMContentLoaded", function() {
     navContainer.style.backgroundColor = '#bbb';
     navContainer.style.position = 'fixed'
     navContainer.style.display = 'flex';
+    navContainer.className = 'navbar-container';
+
 
     // Create the unordered list for the navigation bar
     const navbar = document.createElement('ul');
