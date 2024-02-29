@@ -45,8 +45,8 @@ li {
     padding: 0;
     overflow: hidden;
     background-color: #ffffff;
-    top: 0;
     width: 180px;
+    height: 100%;
     border: 1px solid #bbb;
 }
 .navbarelements {
@@ -75,7 +75,6 @@ li {
     cursor: pointer;
     font-size: 16px;  
     border: none;
-    border: 1px solid #bbb;
     outline: none;
     color: rgb(255, 0, 0);
     padding: 20px 16px;

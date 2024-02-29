@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const navContainer = document.createElement('div');
     navContainer.style.width = '100%';
     navContainer.style.border = '1px solid #000000';
+    navContainer.style.backgroundColor = '#bbb';
     navContainer.style.position = 'fixed'
     navContainer.style.display = 'flex';
 
