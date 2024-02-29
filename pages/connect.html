@@ -10,6 +10,7 @@
         <!-- Scripts needed for every page, copy to each page created  -->
         <script src="../js/createpage.js"></script>
         <script src="../js/connect.js"></script>
+        <script src="https://www.paypal.com/sdk/js?client-id=AXs4SsopqCQSmBS0NqjBtMCDXB1FX-t4tlKJXc-UWhhEd8uJE5Eqgo6ryFFbWUcBK1ZKR8cGFkIisLQ8&#038;vault=true&#038;intent=subscription" data-sdk-integration-source="button-factory"></script>
 
         <!-- Meta information, update title per page -->
         <title>Connect</title>
@@ -54,26 +55,6 @@
                         <br><br>Subscribe by following the links below to PayPal. All funds go directly to Wisconsin Engineer Magazine operations. Thank you for supporting our publication!
                     </p>
                     <div id="paypal-button-container-P-8AG83334XM641921KMVXKO5Y"></div>
-                    <script src="https://www.paypal.com/sdk/js?client-id=AXs4SsopqCQSmBS0NqjBtMCDXB1FX-t4tlKJXc-UWhhEd8uJE5Eqgo6ryFFbWUcBK1ZKR8cGFkIisLQ8&#038;vault=true&#038;intent=subscription" data-sdk-integration-source="button-factory"></script>
-                    <script>
-                    paypal.Buttons({
-                        style: {
-                            shape: 'rect',
-                            color: 'gold',
-                            layout: 'vertical',
-                            label: 'paypal'
-                        },
-                        createSubscription: function(data, actions) {
-                            return actions.subscription.create({
-                            /* Creates the subscription */
-                            plan_id: 'P-8AG83334XM641921KMVXKO5Y'
-                            });
-                        },
-                        onApprove: function(data, actions) {
-                            alert(data.subscriptionID); // You can add optional success message for the subscriber here
-                        }
-                    }).render('#paypal-button-container-P-8AG83334XM641921KMVXKO5Y'); // Renders the PayPal button
-                    </script>
                     
                     <!-- Feedback form -->
                     <form action="https://formspree.io/f/mvoearrr" method="POST" class="form-area">

@@ -42,5 +42,22 @@ document.addEventListener("DOMContentLoaded", function() {
         const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
         return regex.test(navigator.userAgent);
     }
+    paypal.Buttons({
+        style: {
+            shape: 'rect',
+            color: 'gold',
+            layout: 'vertical',
+            label: 'paypal'
+        },
+        createSubscription: function(data, actions) {
+            return actions.subscription.create({
+            /* Creates the subscription */
+            plan_id: 'P-8AG83334XM641921KMVXKO5Y'
+            });
+        },
+        onApprove: function(data, actions) {
+            alert(data.subscriptionID); // You can add optional success message for the subscriber here
+        }
+    }).render('#paypal-button-container-P-8AG83334XM641921KMVXKO5Y'); // Renders the PayPal button
 });
 
