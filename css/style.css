@@ -41,6 +41,7 @@ li {
 /* Navbar */
 .navbar-container {
     top: 0;
+    z-index: 1;
 }
 .navbar {
     list-style-type: none;
