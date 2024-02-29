@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (!isMobile()) {
             const imageGrid = document.querySelector('.image-grid');
             imageGrid.style.display = lessThan90() ? 'flex' : 'grid';
-            imageGrid.style.width = lessThan90() ? '50%' : '75%';
+            imageGrid.style.width = lessThan90() ? '50%' : '70%';
             imageGrid.style.margin = '0 auto 50px';            
             imageGrid.style.flexDirection = lessThan90() ? 'column' : 'none';
         }

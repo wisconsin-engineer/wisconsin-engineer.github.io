@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (!isMobile()) {
             const biographyContainer = document.querySelector('.biography-container');
             biographyContainer.style.display = lessThan90() ? 'flex' : 'grid';
-            biographyContainer.style.width = lessThan90() ? '50%' : '75%';
+            biographyContainer.style.width = lessThan90() ? '50%' : '70%';
             biographyContainer.style.margin = '0 auto 50px';            
             biographyContainer.style.flexDirection = lessThan90() ? 'column' : 'none';
             const pictureCards = document.querySelectorAll('.picture-card');

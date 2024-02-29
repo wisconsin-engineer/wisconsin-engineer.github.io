@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Create the unordered list for the navigation bar
     const navbar = document.createElement('ul');
     navbar.className = 'navbar';
+    navbar.style.position = 'fixed';
 
     // Create the logo image and append it to the navbar
     const anchor = document.createElement('a');
