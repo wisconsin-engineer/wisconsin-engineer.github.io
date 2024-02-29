@@ -39,20 +39,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const navbar = document.createElement('ul');
     navbar.className = 'navbar';
 
-    // Create the logo image and append it to the navbar
-    /**
-    const anchor = document.createElement('a');
-    const logo = document.createElement('img');
-    anchor.href = (title === "Home") ? 'index.html' : '../index.html';
-    anchor.href = title.includes("Article:") ? '../../index.html' : anchor.href;
-    logo.className = 'logo';
-    logo.src = (title === "Home") ? 'images/icons/logo.png' : '../images/icons/logo.png';
-    logo.src = title.includes("Article:") ? '../../images/icons/logo.png' : logo.src;
-    logo.alt = 'wisconsinengineer';
-    anchor.appendChild(logo);
-    navbar.appendChild(anchor);
-    /**/
-
     // Create the search bar and append it to the navbar, not needed at the moment
     /**
     const searchbar = document.createElement('div');
