@@ -28,13 +28,17 @@ document.addEventListener("DOMContentLoaded", function() {
      * Navbar creation code
      ******************************************/
     const navContainer = document.createElement('div');
+    navContainer.style.width = '100%';
+    navContainer.style.border = '1px solid #000000';
+    navContainer.style.position = 'fixed'
+    navContainer.style.display = 'flex';
 
     // Create the unordered list for the navigation bar
     const navbar = document.createElement('ul');
     navbar.className = 'navbar';
-    navbar.style.position = 'fixed';
 
     // Create the logo image and append it to the navbar
+    /**
     const anchor = document.createElement('a');
     const logo = document.createElement('img');
     anchor.href = (title === "Home") ? 'index.html' : '../index.html';
@@ -45,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
     logo.alt = 'wisconsinengineer';
     anchor.appendChild(logo);
     navbar.appendChild(anchor);
+    /**/
 
     // Create the search bar and append it to the navbar, not needed at the moment
     /**
@@ -97,8 +102,22 @@ document.addEventListener("DOMContentLoaded", function() {
     dropdown.appendChild(dropdownContent);
     navbar.appendChild(dropdown);
 
+    // Create the logo image and append it to the navbar
+    /**/
+    const anchor = document.createElement('a');
+    const logo = document.createElement('img');
+    anchor.href = (title === "Home") ? 'index.html' : '../index.html';
+    anchor.href = title.includes("Article:") ? '../../index.html' : anchor.href;
+    logo.className = 'logo';
+    logo.src = (title === "Home") ? 'images/icons/logo.png' : '../images/icons/logo.png';
+    logo.src = title.includes("Article:") ? '../../images/icons/logo.png' : logo.src;
+    logo.alt = 'wisconsinengineer';
+    anchor.appendChild(logo);
+    /**/
+
     // Append the navbar to the container and add it to the beginning of the page
     navContainer.appendChild(navbar);
+    navContainer.appendChild(anchor);
     document.body.prepend(navContainer);
 
     /***********************************************
