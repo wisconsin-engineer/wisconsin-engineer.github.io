@@ -40,7 +40,7 @@
 /* LATEST ISSUE SECTION */
 .latest-issue-wrapper {
     padding-bottom: 50px;
-    padding-top: 10px;
+    padding-top: 5px;
     background-color: #273036;
 }
 .latest-issue-header h2{
@@ -48,4 +48,30 @@
     color: #FFFFFF;
     padding: 10px;
     text-align: center;
+}
+.latest-issue-content {
+    display: flex;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.latest-issue-image-area {
+    padding: 0;
+    padding-right: 5%;
+}
+.latest-issue-cover-image {
+    width: 100%;
+    padding: 0;
+}
+.latest-issue-text {
+    width: 100%;
+}
+.latest-issue-text h3 {
+    color: #FFFFFF;
+    margin-bottom: 0px;
+}
+.latest-issue-text p {
+    color: #FFFFFF;
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 5px;
 }
