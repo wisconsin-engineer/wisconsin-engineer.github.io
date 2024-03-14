@@ -130,3 +130,15 @@ li {
 .content-body {
     margin-top: 75px;
 }
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    width: 75px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #FFFFFF;
+  }

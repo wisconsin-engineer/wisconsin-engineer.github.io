@@ -81,3 +81,76 @@
     margin-bottom: 0;
     margin-top: 5px;
 }
+
+/* Join WEM Section */
+.join-wem-wrapper {
+    padding-bottom: 50px;
+}
+.join-wem-header h2{
+    font-size: 30px;
+    color: #34141B;
+    padding: 10px;
+    text-align: center;
+}
+.join-wem-content {
+    width: 90%;
+    margin: 0 auto;
+}
+.join-wem-intro-section {
+    display: flex;
+    align-items: center;
+}
+.join-wem-intro-section h3 {
+    margin-right: 5%;
+}
+.join-wem-intro-section img {
+    width: 50%
+}
+.join-wem-steps {
+    margin-top: 40px;
+}
+.join-wem-half-steps {
+    display: flex;
+    column-gap: 30px;
+}
+.join-wem-step-half {
+    background-color: #34151B;
+    width: 50%;
+    padding: 10px;
+}
+.join-wem-step-half-top {
+    display: flex;
+    align-items: center;
+}
+.join-wem-step-half h1 {
+    color: #34151B;
+    font-size: 40px;
+}
+.join-wem-step-half h2 {
+    color: #FFFFFF;
+    margin-left: 10px;
+}
+.join-wem-step-half p {
+    color: #FFFFFF;
+}
+.join-wem-step {
+    background-color: #34151B;
+    display: flex;
+    padding: 10px;
+    margin-top: 30px;
+    align-items: center;
+}
+.join-wem-step h1 {
+    color: #341543;
+    font-size: 40px;
+}
+.join-wem-step h2 {
+    color: #FFFFFF;
+}
+.join-wem-step p {
+    color: #FFFFFF;
+}
+.join-wem-rest-of-content {
+    margin-left: 10px;
+    width: fit-content;
+}
