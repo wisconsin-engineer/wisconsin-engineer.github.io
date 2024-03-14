@@ -141,12 +141,19 @@ document.addEventListener("DOMContentLoaded", function() {
      ***********************************************/
     const footer = document.createElement('div');
     footer.className = 'footer';
-    footer.style.backgroundColor = '#3232';
     footer.style.margin = '0';
     footer.style.paddingLeft = '20px';
     footer.style.paddingTop = '20px';
+    footer.style.backgroundColor = '#273036';
 
-    
+    const leftHalf = document.createElement('div');
+
+    const footerLogo = document.createElement('img');
+    footerLogo.className = 'logo';
+    footerLogo.src = (title === "Home") ? 'images/icons/footerlogo.png' : '../images/icons/footerlogo.png';
+    footerLogo.src = title.includes("Article:") ? '../../images/icons/footerlogo.png' : footerLogo.src;
+    footerLogo.alt = 'wisconsinengineer';
+    footer.appendChild(footerLogo);
 
     // Append the footer to the body, after all of the page-specific content
     document.body.appendChild(footer);

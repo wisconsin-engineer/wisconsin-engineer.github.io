@@ -10,7 +10,7 @@
     margin-top: 100px; /* WILL NEED TO CHANGE LATER LOL */
     background-color: #BA122B;
 }
-.online-content-header h2{
+.online-content-header h2 {
     font-size: 30px;
     color: #FFFFFF;
     padding: 10px;
@@ -18,11 +18,22 @@
 }
 .online-content-grid {
     display: flex;
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
+    justify-content: space-between;
 }
 .online-content-story-box {
     width: 33%;
+    text-align: center;
+}
+.online-content-story-box h3 {
+    color: #BA122B;
+}
+.online-content-story-box a {
+    text-decoration: none;
+}
+.online-content-story-box a :hover{
+    text-decoration: underline;
 }
 .online-content-button {
     margin-top: 100px;
@@ -133,6 +144,9 @@
 .join-wem-step-half p {
     color: #FFFFFF;
 }
+.join-wem-step-half p a {
+    color: #FFFFFF;
+}
 .join-wem-step {
     background-color: #34151B;
     display: flex;
@@ -153,4 +167,7 @@
 .join-wem-rest-of-content {
     margin-left: 10px;
     width: fit-content;
+}
+.join-wem-rest-of-content p a {
+    color: #FFFFFF;
 }
