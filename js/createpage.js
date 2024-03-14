@@ -29,8 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
      ******************************************/
     const navContainer = document.createElement('div');
     navContainer.style.width = '100%';
-    navContainer.style.border = '1px solid #000000';
-    navContainer.style.backgroundColor = '#bbb';
+    navContainer.style.backgroundColor = '#FFFFFF';
     navContainer.style.position = 'fixed'
     navContainer.style.display = 'flex';
     navContainer.className = 'navbar-container';
@@ -38,57 +37,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // Create the unordered list for the navigation bar
     const navbar = document.createElement('ul');
     navbar.className = 'navbar';
-
-    // Create the search bar and append it to the navbar, not needed at the moment
-    /**
-    const searchbar = document.createElement('div');
-    searchbar.className = 'searchbar';
-    const input = document.createElement('input');
-    input.type = 'text';
-    input.id = 'searchbox';
-    input.name = 'searchbox';
-    input.placeholder = 'Search Wisconsin Engineer';
-    input.required = true;
-    const button1 = document.createElement('button');
-    button1.textContent = 'Go';
-    searchbar.appendChild(input);
-    searchbar.appendChild(button1);
-    navbar.appendChild(searchbar);
-    /**/
-
-    // Create the dropdown menu
-    const dropdown = document.createElement('li');
-    dropdown.className = 'navbarelements dropdown-menu';
-    const dropButton = document.createElement('button');
-    dropButton.className = 'drop-button';
-    dropButton.id = 'navDrop';
-    dropButton.innerHTML = 'Menu <i class="fa fa-caret-down"></i>';
-    dropdown.appendChild(dropButton);
-
-    // Dropdown content
-    const dropdownContent = document.createElement('div');
-    const links = [
-        { href: 'index.html', text: 'Home' },
-        { href: 'pages/about.html', text: 'About' },
-        { href: 'pages/team.html', text: 'Meet Our Team' },
-        { href: 'pages/articles.html', text: 'Articles' },
-        { href: 'pages/crossword.html', text: 'Crossword'},
-        { href: 'pages/photocontest.html', text: 'Photo Contest'},
-        { href: 'pages/connect.html', text: 'Connect/Subscribe'}
-    ];
-
-    links.forEach(link => {
-        const a = document.createElement('a');
-        a.href = (title === "Home") ?  link.href : '../' + link.href;
-        a.href = (title.includes("Article:")) ? '../../' + link.href : a.href;
-        console.log(a.href);
-        a.className = 'navbarelements dropdown-content';
-        a.textContent = link.text;
-        dropdownContent.appendChild(a);
-    });
-
-    dropdown.appendChild(dropdownContent);
-    navbar.appendChild(dropdown);
 
     // Create the logo image and append it to the navbar
     /**/
@@ -103,9 +51,33 @@ document.addEventListener("DOMContentLoaded", function() {
     anchor.appendChild(logo);
     /**/
 
-    // Append the navbar to the container and add it to the beginning of the page
-    navContainer.appendChild(navbar);
     navContainer.appendChild(anchor);
+
+    // Links
+    const links = [
+        { href: 'index.html', text: 'Home' },
+        { href: 'pages/about.html', text: 'About' },
+        { href: 'pages/team.html', text: 'Team' },
+        { href: 'pages/articles.html', text: 'Articles' },
+        { href: 'pages/crossword.html', text: 'Crossword'},
+        { href: 'pages/photocontest.html', text: 'Photo Contest'},
+        { href: 'pages/connect.html', text: 'Connect'},
+    ];
+
+    links.forEach(link => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = (title === "Home") ?  link.href : '../' + link.href;
+        a.href = (title.includes("Article:")) ? '../../' + link.href : a.href;
+        li.className = 'navbarelements';
+        a.textContent = link.text;
+        li.appendChild(a);
+        navbar.appendChild(li);
+    });
+
+    navContainer.append(navbar);
+
+    // Append the navbar to the container and add it to the beginning of the page
     document.body.prepend(navContainer);
 
     /***********************************************

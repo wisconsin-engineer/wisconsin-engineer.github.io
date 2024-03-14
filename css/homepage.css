@@ -1,3 +1,6 @@
+.content-body {
+    background-color: #F4EFE1;
+}
 .content-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
