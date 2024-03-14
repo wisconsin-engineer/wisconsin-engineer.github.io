@@ -2,12 +2,20 @@
     background-color: #F4EFE1;
 }
 
+.wiscengineerheader {
+    width: 100%;
+    margin-top: 50px;
+}
+
 /* ONLINE CONTENT SECTION*/
 .online-content-wrapper {
     padding-bottom: 50px;
 }
+.online-content-wrapper a {
+    text-decoration: none;
+}
 .online-content-header {
-    margin-top: 100px; /* WILL NEED TO CHANGE LATER LOL */
+    margin-top: 50px;
     background-color: #BA122B;
 }
 .online-content-header h2 {

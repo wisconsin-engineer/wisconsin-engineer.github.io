@@ -145,16 +145,42 @@ document.addEventListener("DOMContentLoaded", function() {
     footer.style.paddingLeft = '20px';
     footer.style.paddingTop = '20px';
     footer.style.backgroundColor = '#273036';
+    footer.style.display = 'flex';
 
     const leftHalf = document.createElement('div');
+    leftHalf.style.backgroundColor = '#273036';
+    leftHalf.style.display = 'flex';
 
     const footerLogo = document.createElement('img');
     footerLogo.className = 'logo';
     footerLogo.src = (title === "Home") ? 'images/icons/footerlogo.png' : '../images/icons/footerlogo.png';
     footerLogo.src = title.includes("Article:") ? '../../images/icons/footerlogo.png' : footerLogo.src;
     footerLogo.alt = 'wisconsinengineer';
-    footer.appendChild(footerLogo);
+    leftHalf.appendChild(footerLogo);
+
+    const instagram = document.createElement('a');
+    instagram.href = "https://www.instagram.com/thewisconsinengineer/";
+    const instagramLogo = document.createElement('img');
+    instagramLogo.src = (title === "Home") ? 'images/icons/instagram.png' : '../images/icons/instagram.png';
+    instagramLogo.src = title.includes("Article:") ? '../../images/icons/instagram.png' : instagramLogo.src;
+    instagramLogo.alt = 'wisconsinengineer';
+    instagram.appendChild(instagramLogo)
+    leftHalf.appendChild(instagram);
+
+    const linkedin = document.createElement('a');
+    linkedin.href = "https://www.linkedin.com/company/wisconsin-engineer-magazine/";
+    const linkedinLogo = document.createElement('img');
+    linkedinLogo.src = (title === "Home") ? 'images/icons/linkedin.png' : '../images/icons/linkedin.png';
+    linkedinLogo.src = title.includes("Article:") ? '../../images/icons/linkedin.png' : linkedinLogo.src;
+    linkedinLogo.alt = 'wisconsinengineer';
+    linkedin.appendChild(linkedinLogo)
+    leftHalf.appendChild(linkedin);
+
+    const address = document.createElement('p');
+    address.textContent = "M10";
+    address.color = "#FFFFFF";
+    leftHalf.appendChild(address);
 
     // Append the footer to the body, after all of the page-specific content
-    document.body.appendChild(footer);
+    document.body.appendChild(leftHalf);
 });
