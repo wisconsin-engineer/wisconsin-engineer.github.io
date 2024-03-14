@@ -177,8 +177,11 @@ document.addEventListener("DOMContentLoaded", function() {
     leftHalf.appendChild(linkedin);
 
     const address = document.createElement('p');
-    address.textContent = "M10";
-    address.color = "#FFFFFF";
+    address.innerHTML = "M1066 Engineering Centers Building<br>1550 Engineering Drive<br>Madison, WI 53705<br><br><a href='mailto:wiscengrmagazine@gmail.com'>wiscengrmagazine@gmail.com</a>";
+    let addressEmail = address.querySelector('a');
+    addressEmail.style.textDecoration = 'none';
+    addressEmail.style.color = '#FFFFFF';
+    address.style.color = "#FFFFFF";
     leftHalf.appendChild(address);
 
     // Append the footer to the body, after all of the page-specific content
