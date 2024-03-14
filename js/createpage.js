@@ -29,8 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
      ******************************************/
     const navContainer = document.createElement('div');
     navContainer.style.width = '100%';
-    navContainer.style.border = '1px solid #000000';
-    navContainer.style.backgroundColor = '#bbb';
+    navContainer.style.backgroundColor = '#FFFFFF';
     navContainer.style.position = 'fixed'
     navContainer.style.display = 'flex';
     navContainer.className = 'navbar-container';
@@ -38,57 +37,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // Create the unordered list for the navigation bar
     const navbar = document.createElement('ul');
     navbar.className = 'navbar';
-
-    // Create the search bar and append it to the navbar, not needed at the moment
-    /**
-    const searchbar = document.createElement('div');
-    searchbar.className = 'searchbar';
-    const input = document.createElement('input');
-    input.type = 'text';
-    input.id = 'searchbox';
-    input.name = 'searchbox';
-    input.placeholder = 'Search Wisconsin Engineer';
-    input.required = true;
-    const button1 = document.createElement('button');
-    button1.textContent = 'Go';
-    searchbar.appendChild(input);
-    searchbar.appendChild(button1);
-    navbar.appendChild(searchbar);
-    /**/
-
-    // Create the dropdown menu
-    const dropdown = document.createElement('li');
-    dropdown.className = 'navbarelements dropdown-menu';
-    const dropButton = document.createElement('button');
-    dropButton.className = 'drop-button';
-    dropButton.id = 'navDrop';
-    dropButton.innerHTML = 'Menu <i class="fa fa-caret-down"></i>';
-    dropdown.appendChild(dropButton);
-
-    // Dropdown content
-    const dropdownContent = document.createElement('div');
-    const links = [
-        { href: 'index.html', text: 'Home' },
-        { href: 'pages/about.html', text: 'About' },
-        { href: 'pages/team.html', text: 'Meet Our Team' },
-        { href: 'pages/articles.html', text: 'Articles' },
-        { href: 'pages/crossword.html', text: 'Crossword'},
-        { href: 'pages/photocontest.html', text: 'Photo Contest'},
-        { href: 'pages/connect.html', text: 'Connect/Subscribe'}
-    ];
-
-    links.forEach(link => {
-        const a = document.createElement('a');
-        a.href = (title === "Home") ?  link.href : '../' + link.href;
-        a.href = (title.includes("Article:")) ? '../../' + link.href : a.href;
-        console.log(a.href);
-        a.className = 'navbarelements dropdown-content';
-        a.textContent = link.text;
-        dropdownContent.appendChild(a);
-    });
-
-    dropdown.appendChild(dropdownContent);
-    navbar.appendChild(dropdown);
 
     // Create the logo image and append it to the navbar
     /**/
@@ -103,9 +51,33 @@ document.addEventListener("DOMContentLoaded", function() {
     anchor.appendChild(logo);
     /**/
 
-    // Append the navbar to the container and add it to the beginning of the page
-    navContainer.appendChild(navbar);
     navContainer.appendChild(anchor);
+
+    // Links
+    const links = [
+        { href: 'index.html', text: 'Home' },
+        { href: 'pages/about.html', text: 'About' },
+        { href: 'pages/team.html', text: 'Team' },
+        { href: 'pages/articles.html', text: 'Articles' },
+        { href: 'pages/crossword.html', text: 'Crossword'},
+        { href: 'pages/photocontest.html', text: 'Photo Contest'},
+        { href: 'pages/connect.html', text: 'Connect'},
+    ];
+
+    links.forEach(link => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = (title === "Home") ?  link.href : '../' + link.href;
+        a.href = (title.includes("Article:")) ? '../../' + link.href : a.href;
+        li.className = 'navbarelements';
+        a.textContent = link.text;
+        li.appendChild(a);
+        navbar.appendChild(li);
+    });
+
+    navContainer.append(navbar);
+
+    // Append the navbar to the container and add it to the beginning of the page
     document.body.prepend(navContainer);
 
     /***********************************************
@@ -169,144 +141,49 @@ document.addEventListener("DOMContentLoaded", function() {
      ***********************************************/
     const footer = document.createElement('div');
     footer.className = 'footer';
-    footer.style.backgroundColor = '#3232';
     footer.style.margin = '0';
     footer.style.paddingLeft = '20px';
     footer.style.paddingTop = '20px';
-    footer.style.marginTop = '20px';
+    footer.style.backgroundColor = '#273036';
+    footer.style.display = 'flex';
 
-    // Add social media links
-    const socialMediaBox = document.createElement('div');
+    const leftHalf = document.createElement('div');
+    leftHalf.style.backgroundColor = '#273036';
+    leftHalf.style.display = 'flex';
 
-    // Instagram logo creation
+    const footerLogo = document.createElement('img');
+    footerLogo.className = 'logo';
+    footerLogo.src = (title === "Home") ? 'images/icons/footerlogo.png' : '../images/icons/footerlogo.png';
+    footerLogo.src = title.includes("Article:") ? '../../images/icons/footerlogo.png' : footerLogo.src;
+    footerLogo.alt = 'wisconsinengineer';
+    leftHalf.appendChild(footerLogo);
+
     const instagram = document.createElement('a');
-    instagram.href = 'https://www.instagram.com/thewisconsinengineer/';
-    const instagramIcon = document.createElement('img');
-    instagramIcon.style.width = '50px';
-    instagramIcon.src = (title === "Home") ? 'images/icons/instagram.png' : '../images/icons/instagram.png';
-    instagramIcon.src = title.includes("Article:") ? '../../images/icons/instagram.png' : instagramIcon.src;
-    instagramIcon.alt = 'Instagram';
-    instagram.appendChild(instagramIcon); // Append the Instagram icon to the anchor
+    instagram.href = "https://www.instagram.com/thewisconsinengineer/";
+    const instagramLogo = document.createElement('img');
+    instagramLogo.src = (title === "Home") ? 'images/icons/instagram.png' : '../images/icons/instagram.png';
+    instagramLogo.src = title.includes("Article:") ? '../../images/icons/instagram.png' : instagramLogo.src;
+    instagramLogo.alt = 'wisconsinengineer';
+    instagram.appendChild(instagramLogo)
+    leftHalf.appendChild(instagram);
 
-    // Twitter logo creation
-    const twitter = document.createElement('a');
-    twitter.href = 'https://twitter.com/wiscengrmag?lang=en';
-    const twitterIcon = document.createElement('img');
-    twitterIcon.style.width = '50px';
-    twitterIcon.src = (title === "Home") ? 'images/icons/twitter.png' : '../images/icons/twitter.png';
-    twitterIcon.src = title.includes("Article:") ? '../../images/icons/twitter.png' : twitterIcon.src;
-    twitterIcon.alt = 'Twitter';
-    twitter.appendChild(twitterIcon); // Append the Twitter icon to the anchor
+    const linkedin = document.createElement('a');
+    linkedin.href = "https://www.linkedin.com/company/wisconsin-engineer-magazine/";
+    const linkedinLogo = document.createElement('img');
+    linkedinLogo.src = (title === "Home") ? 'images/icons/linkedin.png' : '../images/icons/linkedin.png';
+    linkedinLogo.src = title.includes("Article:") ? '../../images/icons/linkedin.png' : linkedinLogo.src;
+    linkedinLogo.alt = 'wisconsinengineer';
+    linkedin.appendChild(linkedinLogo)
+    leftHalf.appendChild(linkedin);
 
-    // Facebook logo creation
-    const facebook = document.createElement('a');
-    facebook.href = 'https://www.facebook.com/WiscEngrMag';
-    const facebookIcon = document.createElement('img');
-    facebookIcon.style.width = '50px';
-    facebookIcon.src = (title === "Home") ? 'images/icons/facebook.png' : '../images/icons/facebook.png';
-    facebookIcon.src = title.includes("Article:") ? '../../images/icons/facebook.png' : facebookIcon.src;
-    facebookIcon.alt = 'Facebook';
-    facebook.appendChild(facebookIcon); // Append the Facebook icon to the anchor
-
-    // YouTube logo creation
-    const youtube = document.createElement('a');
-    youtube.href = 'https://www.youtube.com/channel/UCyxWH_OPZ0pqJXxewkZAqpw';
-    const youtubeIcon = document.createElement('img');
-    youtubeIcon.style.width = '50px';
-    youtubeIcon.src = (title === "Home") ? 'images/icons/youtube.png' : '../images/icons/youtube.png';
-    youtubeIcon.src = title.includes("Article:") ? '../../images/icons/youtube.png' : youtubeIcon.src;
-    youtubeIcon.alt = 'YouTube';
-    youtube.appendChild(youtubeIcon); // Append the YouTube icon to the anchor
-
-    socialMediaBox.appendChild(instagram);
-    socialMediaBox.appendChild(twitter);
-    socialMediaBox.appendChild(facebook);
-    socialMediaBox.appendChild(youtube);
-    footer.appendChild(socialMediaBox);
-
-    // Create the footer search bar, not needed at the moment
-    /**
-    const footerSearchbar = document.createElement('div');
-    footerSearchbar.className = 'footer-searchbar';
-    const input2 = document.createElement('input');
-    input2.type = 'text';
-    input2.id = 'footer-searchbox';
-    input2.name = 'searchbox';
-    input2.placeholder = 'Search Wisconsin Engineer';
-    input2.required = true;
-    const button2 = document.createElement('button');
-    button2.textContent = 'Go';
-    footerSearchbar.appendChild(input2);
-    footerSearchbar.appendChild(button2);
-    footer.appendChild(footerSearchbar);
-    /**/
-
-    // Add recent posts section
-    const recentPostsTitle = document.createElement('h2');
-    recentPostsTitle.textContent = 'Recent Posts';
-    footer.appendChild(recentPostsTitle);
-
-    // TODO update this whenever adding new posts!
-    const postsList = document.createElement('ul');
-    const posts = [
-        { href: '#', text: 'Title of post 1' },
-        { href: '#', text: 'Title of post 2' },
-        { href: '#', text: 'Title of post 3' },
-        { href: '#', text: 'Title of post 4' },
-        { href: '#', text: 'Title of post 5' }
-    ];
-
-    posts.forEach(post => {
-        const postLink = document.createElement('a');
-        postLink.href = post.href;
-        const postItem = document.createElement('li');
-        postItem.textContent = post.text;
-        postLink.appendChild(postItem);
-        postsList.appendChild(postLink);
-    });
-
-    footer.appendChild(postsList);
-
-    // Add copyright
-    const copyright = document.createElement('h4');
-    copyright.innerHTML = '&copy; 2024 Wisconsin Engineer Magazine | <a href="https://digital.library.wisc.edu/1711.dl/7P3DBZ6M5SIJV8I" target="_blank">Archive</a>';
-    footer.appendChild(copyright);
-
-    // Add 'scroll to top' button
-    const scrollButton1 = document.createElement('button');
-    scrollButton1.id = 'scrollbutton';
-    scrollButton1.textContent = 'Click to go to top of page';
-    scrollButton1.onclick = function() {
-        window.scrollTo({top: 0, behavior: 'smooth'});
-    };
-    footer.appendChild(scrollButton1);
+    const address = document.createElement('p');
+    address.innerHTML = "M1066 Engineering Centers Building<br>1550 Engineering Drive<br>Madison, WI 53705<br><br><a href='mailto:wiscengrmagazine@gmail.com'>wiscengrmagazine@gmail.com</a>";
+    let addressEmail = address.querySelector('a');
+    addressEmail.style.textDecoration = 'none';
+    addressEmail.style.color = '#FFFFFF';
+    address.style.color = "#FFFFFF";
+    leftHalf.appendChild(address);
 
     // Append the footer to the body, after all of the page-specific content
-    document.body.appendChild(footer);
-    
-    /**************************************************************
-     * Dropdown menu logic
-     **************************************************************/
-    const menuButton = document.getElementById("navDrop");
-    const buttons = document.querySelectorAll(".dropdown-content");
-    const scrollButton = document.getElementById("scrollbutton");
-
-    // collapsed by default
-    buttons.forEach(button => {
-        button.style.display = 'none';
-    });
-    menuButton.style.borderBottom = 'none';
-
-    // toggle open or collapsed
-    function dropDown() {
-        menuButton.classList.toggle("show");
-        const buttons = document.querySelectorAll(".dropdown-content");
-        buttons.forEach(button => {
-            button.style.display = menuButton.classList.contains("show") ? 'block' : 'none';
-        });
-        menuButton.style.borderBottom = menuButton.classList.contains("show") ? '1px solid #bbb' : 'none';
-    }
-    
-    menuButton.addEventListener('click', dropDown);
-    
+    document.body.appendChild(leftHalf);
 });
