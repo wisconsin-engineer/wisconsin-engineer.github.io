@@ -1,30 +1,51 @@
 .content-body {
     background-color: #F4EFE1;
 }
-.content-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 20px;
-    column-gap: 10px;
-    margin-bottom:0;
-    width: 75%;
-    margin:0 auto;
-    margin-top: 10px;;
+
+/* ONLINE CONTENT SECTION*/
+.online-content-wrapper {
+    padding-bottom: 50px;
+}
+.online-content-header {
+    margin-top: 100px; /* WILL NEED TO CHANGE LATER LOL */
+    background-color: #BA122B;
+}
+.online-content-header h2{
+    font-size: 30px;
+    color: #FFFFFF;
+    padding: 10px;
     text-align: center;
 }
-.content-card {
-    padding-top: 0;
-    padding-bottom: 10px;
-    height:100%;
+.online-content-grid {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
 }
-#magazine-cover {
-    width:50%;
+.online-content-story-box {
+    width: 33%;
 }
-#homelogo {
-    width: 50%;
-    margin-left: 25%;
+.online-content-button {
+    margin-top: 100px;
+    width: 300px;
+    margin: 0 auto;
+    background-color: #BA122B;
 }
-.instagram-embed {
-    margin:0 auto;
-    width: 75%;
+.online-content-button h3 {
+    font-size: 15px;
+    color: #FFFFFF;
+    padding: 10px;
+    text-align: center;
+}
+
+/* LATEST ISSUE SECTION */
+.latest-issue-wrapper {
+    padding-bottom: 50px;
+    padding-top: 10px;
+    background-color: #273036;
+}
+.latest-issue-header h2{
+    font-size: 30px;
+    color: #FFFFFF;
+    padding: 10px;
+    text-align: center;
 }
