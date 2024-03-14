@@ -68,6 +68,13 @@
 .latest-issue-image-area {
     padding: 0;
     padding-right: 5%;
+    text-align: center;
+}
+.latest-issue-image-area h2 {
+    color: #FFFFFF;
+}
+.latest-issue-image-area a {
+    color: #FFFFFF;
 }
 .latest-issue-cover-image {
     width: 100%;
@@ -78,9 +85,11 @@
 }
 .latest-issue-text a {
     color: #FFFFFF;
+    text-decoration: none;
 }
 .latest-issue-text h3 :hover {
     color: #BA122B;
+    text-decoration: underline;
 }
 .latest-issue-text h3 {
     color: #FFFFFF;
