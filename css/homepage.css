@@ -60,10 +60,16 @@
 }
 .latest-issue-cover-image {
     width: 100%;
-    padding: 0;
+    padding: 0 auto;
 }
 .latest-issue-text {
     width: 100%;
+}
+.latest-issue-text a {
+    color: #FFFFFF;
+}
+.latest-issue-text h3 :hover {
+    color: #BA122B;
 }
 .latest-issue-text h3 {
     color: #FFFFFF;
